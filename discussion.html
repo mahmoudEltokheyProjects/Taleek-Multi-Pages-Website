@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Discussion</title>
+		<!-- هذا وصف للموقع حيث مجموعة من الكلمات تصف الموقع -->
+		<meta name="description" 
+			  content="Learn languages for free with Taleek. Learn English, French, Chinese, German, Spanish, Turkish, Russian and many 
+					   more. Download Taleek for iOS and Android and start learning today."
+		>
+		<!--  هذا مجموعة من المصلحات و الكلمات اللي موجودة في الموقع -->
+		<meta name="keywords" content="taleek, learn, English, French, Chinese, Spanish, German, Turkish, Russian, learn English, learn 
+									   French, learn Chinese, learn Spanish, learn German, learn Turkish, learn Russian, Ibrahim Adel, طليق, تعلم, الانجليزية, انجليزي, الفرنسية, فرنسي, الصينية, صيني, الاسبانية, الأسبانية, أسباني, الألمانية, ألماني, التركية, تركي, الروسية, روسي, تعلم الانجليزية, تعلم الفرنسية, تعلم الصينية, تعلم الأسبانية, تعلم الألمانية, تعلم التركية, تعلم الروسية, تعلم اللغات"
+		>
+        <link rel="stylesheet" href="discussion_style.css" />
+		<link rel="stylesheet" href="vendors/font-awesome.min.css">
+		<!-- بتاع الموقع هعمل الاتي tab عشان احط صورة علي ال -->
+	  	<link rel="icon" href="images/favicon.png" >
+    </head>
+    <body>
+		<!-- ////////////////////////////////////////////////// body overlay layer ////////////////////////////////////////////////// -->
+		<div class="bodyOverlay" id="bodyOverlayId"></div>		
+		<!-- ************************************** navbar 1 section ************************************** -->
+		<div class="navbar1" id="navbarId">
+			<div class="navbar1Container">
+				<!-- ///////////// navbar 1 logo : left part ///////////// -->
+				<div class="navbar1Logo">
+					<img src="images/logo2.png" alt="image not found">
+					<h2 class="navbar1LogoH2">taleek</h2>
+				</div>
+				<!-- ///////////// navbar 1 links : right part ///////////// -->
+				<!--  في حالة الشاشات الصغيرة right links هيتم اخفاء هذه اللينكان   -->
+				<div class="navbar1Links">
+					<ul>
+						<li><a href="index.html">home</a></li>
+						<li><a href="discussion.html" class="active">discussion</a></li>
+						<li><a href="courses.html">courses</a></li>
+						<li><a href="blog.html">blog</a></li>
+						<li><a href="about.html">about</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- ************************************** navbar 2 section ************************************** -->
+		<div class="navbar2" id="navbar2Id">
+			<div class="navbar2Container">
+				<!-- ///////////// navbar 2 logo : left part : search and power-off icon ///////////// -->
+				<div class="navbar2LeftPart">
+					<i class="fa fa-search" id="searchFieldId"></i>
+					<i class="fa fa-power-off" id="powerOffId"></i>
+				</div>
+				<!-- /////////////// sign up && sign in form  : searchField icon مش هتظهر الا لما اضغط علي ال /////////////// -->
+				<!-- **********************************  sign up form *********************** -->
+				<div class="loginForm" id="loginFormId">
+					<a href="#"id="closeLoginIconId">&times;</a>
+					<div class="loginFormContainer">
+						<input type="email" placeholder="البريد الالكتروني , أو اسم المستخدم"> 
+						<input type="password" placeholder="كلمة المرور"> 
+						<input type="checkbox"> <a href="#">تذكر </a>
+					</div>
+					<div class="loginAndSignUpBtn">
+						<input type="button" value="تسجيل" id="signUpBtnId">
+						<input type="button" value=" تسجيل الدخول " id="signInBtnId">
+					</div>
+				</div>
+				<!-- **********************************  sign in form ************************ -->
+				<div class="signUpForm" id="sigunUpFormId">
+					<a href="#" id="closeSignUpIconId"> &times; </a>
+					<div class="signUpFormContainer">
+						<label class="usernameLabel">  اسم المستخدم : </label>
+						<input type="text"> 
+						<label class="passwordLabel">  كلمة المرور : </label>
+						<input type="password"> 
+						<label class="passwordLabel"> البريد الالكتروني : </label>
+						<input type="email"> 
+						<p class="signUpPara"> لا تقلق بشأن الخصوصية : لن نشارك او نبع عنوان بريدك الالكتروني لطرف ثالث </p>
+						<label class="countryLabel">  الدولة : </label>
+						<input type="text"> 
+					</div>
+					<input type="button" value="تسجيل">
+				</div>
+				<!-- /////////////// searchField container : navbar 2 اللي في ال search icon مش هيظهر الا لما اضغط علي ال ////////////// -->
+				<div class="searchFieldNavbar2Block" id="searchFieldNavbar2BlockId">
+					<input type="text" placeholder="search... " id="searchFieldNavbar2Id">
+					<a href="#" class="closeIconSearchField" id="closeIconSearchFieldId">&times;</a>	
+				</div>
+				<!-- ///////////// navbar 2 links : right part : logo and menubar icon ///////////// -->
+				<div class="navbar2Links">
+					<ul>
+						<li><a href="#"><img src="images/logo111.png"></a></li>
+						<li class="navbar2RightLink"><a href="#">taleek</a></li>
+						<li>
+							<div class="menubarIconContainer" id="sideNavbar2MenubarIcon">
+								<span class="menubarSpan"></span>
+								<span class="menubarSpan"></span>
+								<span class="menubarSpan"></span>
+							</div>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--  ************************************************** sideNavbar 2 ******************************************************* -->
+		<!--  //////////////// menubar icon  مش هيظهر الا لما اضغط علي ال sideNavbar ال //////////////// -->
+		<div class="sideNavbar2" id="sideNavbar2Id">
+			<!-- ********************* close icon ************************ -->
+			<a href="#" class="closeSideNavBtn" id="closeSideNavBtnId">&times;</a>
+			<div class="sideNavbarContainer">
+				<p class="sideNavbar2HeadPara">جدول حلقات طليق - جدول رفع الحلقات علي تطبيق طليق - يجدد اسبوعيا</p>
+				<p class="sideNavbar2Para">
+					<a href="#"> سؤال و اجابة <i class="fa fa-home"></i> </a> 
+				</p>
+				<p class="sideNavbar2Para">
+					<a href="#"> الاسئلة <i class="fa fa-comment"></i> </a>
+				</p>
+				<p class="sideNavbar2Para">
+					<a href="#"> نقاشات ساخنة <i class="fa fa-bomb"></i> </a>
+				</p>
+				<p class="sideNavbar2Para">
+					<a href="#"> الاسئلة غير المجابة <i class="fa fa-comment-o"></i> </a>
+				</p>
+				<p class="sideNavbar2Para">
+					<a href="#">الاعضاء <i class="fa fa-users"></i> </a>
+				</p>
+				<p class="sideNavbar2Para">
+					<a href="#">طرح الاسئلة <i class="fa fa-plus-square"></i></a>
+				</p>
+			</div>
+		</div>
+		<!-- ********************************************** Notes section ************************************************** -->
+		<div class="notes" id="notesId">
+			<h2 class="notesH2"> الملاحظات </h2>
+			<div class="notesContainer">
+				<i class="fa fa-asl-interpreting" class="notesImgClass"></i>
+				<p class="notesPara">موقع ذامريكان انجليش</p>
+			</div>
+		</div>
+		<!-- ************************************************ send question section ***************************************** -->
+		<div class="sendQuestion" id="sendQuestionId">
+			<div class="sendQuestionContainer">
+				<label class="labelQuestion">اطرح سؤالا : </label>
+				<input type="text" id="inputQuestionId">
+			</div>
+		</div>
+		<!-- **************************************************** messages section ******************************************** -->
+		<div class="messages" id="messagesId">
+			<div class="messagesContainer">
+				<!-- /////////////////////////////// left part : account messages ///////////////////////////// -->
+				<div class="accountMessages">
+					<!-- **************************************  box 1 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++++++++++++++++ row 1 :  account image && question text ++++++++++++++++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person1.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>1</span>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 2 :  account message icon && arrow button ++++++++++++++++++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId1')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId1">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+1</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId1')">
+								<p class="viewsPara">11<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 2 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++++++++++++++++ row 1 :  account image && question text ++++++++++++++++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person2.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>2</span>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 2 :  account message icon && arrow button ++++++++++++++++++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId2')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId2">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+2</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId2')">
+								<p class="viewsPara">12<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 3 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++++++++++++++++ row 1 :  account image && question text ++++++++++++++++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person3.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>3</span>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 2 :  account message icon && arrow button ++++++++++++++++++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon"  id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId3')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId3">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+3</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId3')">
+								<p class="viewsPara">13<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 4 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++++++++++++++++ row 1 :  account image && question text ++++++++++++++++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person4.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>4</span>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 2 :  account message icon && arrow button ++++++++++++++++++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId4')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId4">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+4</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId4')">
+								<p class="viewsPara">4<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 5 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++++++++++++++++ row 1 :  account image && question text ++++++++++++++++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person5.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>5</span>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 2 :  account message icon && arrow button ++++++++++++++++++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId5')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId5">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+5</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId5')">
+								<p class="viewsPara">15<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 6 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++++++++++++++++ row 1 :  account image && question text ++++++++++++++++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person6.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>6</span>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 2 :  account message icon && arrow button ++++++++++++++++++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId6')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId6">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+16</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId6')">
+								<p class="viewsPara">16<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 7 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person7.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>7</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId7')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId7">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+17</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId7')">
+								<p class="viewsPara">17<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 8 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person8.png">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>8</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId8')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId8">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+18</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId8')">
+								<p class="viewsPara">18<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 9 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person9.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>9</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId9')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId9">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+19</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId9')">
+								<p class="viewsPara">19<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 10 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person10.png">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>10</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId10')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId10">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+10</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId10')">
+								<p class="viewsPara">10<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 11 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person11.png">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>11</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId11')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId11">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+11</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId11')">
+								<p class="viewsPara">11<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 12 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person12.png">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>12</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId12')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId12">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+12</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId12')">
+								<p class="viewsPara">12<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 13 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person13.png">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>13</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId13')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId13">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+13</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId13')">
+								<p class="viewsPara">13<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					
+					<!-- **************************************  box 14 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person14.png">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>14</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId14')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId14">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+14</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId14')">
+								<p class="viewsPara">14<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 15 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person15.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>15</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId15')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId15">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+15</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId15')">
+								<p class="viewsPara">15<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 16 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person16.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>16</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId16')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId15">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+16</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId16')">
+								<p class="viewsPara">16<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 17 ********************************* -->
+					<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person17.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>17</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId17')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId17">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+17</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId17')">
+								<p class="viewsPara">17<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+					<!-- **************************************  box 18 ********************************* -->
+						<div class="accountMessageBox">
+						<!-- ++++++++++++++ row 1 :  account image && question text ++++++++++++++ -->
+						<!-- ----------- left part ----------- -->
+						<div class="accountImageAndQuestionTxt">							
+							<span class="questionText"> ( طريقة الكتابة الصينية ( جميع الرموز </span>
+							<img src="images/accountImages/person18.jpg">
+						</div>
+						<!-- ----------- right part ----------- -->
+						<div class="accountMessageNum">
+							<span>18</span>
+						</div>
+						<!-- ++++++++++++++ row 2 :  account message icon && arrow button ++++++++ -->
+						<div class="accountMessageIconArrowButton">
+							<!-- left part :  arrow button -->
+							<div class="commentsMessageIcon"><i class="fa fa-comment-o"></i></div>
+							<!-- right part :  arrow button -->
+							<!-- ***************row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideDown('row3AccountMessageReplyId18')">
+								<i class="fa fa-sort-down" id="arrowAwsomeId"></i>
+							</div>
+						</div>
+						<!-- ++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++ -->
+						<div class="row3AccountMessageReply" id="row3AccountMessageReplyId18">
+							<!-- ////////////////////// left part : number and up and down arrow ////////////////////// -->
+							<div class="leftPartRow3">
+								<i class="fa fa-sort-up"></i>
+								<p class="numberBetweenUpDown">+18</p>
+								<i class="fa fa-sort-down"></i>
+							</div>
+							<!-- /////////// left vertical line : separate between [ number and two arrows] and views number /////////// -->
+							<div class="verticalLine"></div>
+							<!-- ////////////////////// center part : number and up and down arrow ////////////////////// -->
+							<div class="centerRow3">
+								<p class="numberBetweenUpDown">
+									ahmed osama تم الرد عليه منذ 2 دقائق في تصنيف اللغة الصينية بواسطة
+										<br>	(نقاط 867 ) طاب متحمس 
+								</p>
+							</div>
+							<!-- /////////// right vertical line : separate between paragraph and views number /////////// -->
+							<div class="verticalLine2"></div>
+							<!-- ////////////////////// right part : views and down arrow ////////////////////// -->
+							<!-- *************** row 3  يظهر لي ال arrow عشان لما اضغط علي ال slideUp() للدالة row 3 بتاع ال id هبعت ال *************** -->
+							<div class="arrowMessageIcon" id="arrowMessageIconId" onclick="slideUp('row3AccountMessageReplyId18')">
+								<p class="viewsPara">18<br>مشاهدات</p>
+								<!-- *********************** slideUp button ************************** -->
+								<i class="fa fa-sort-up"  id="arrowAwsomeId"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ////////////////////////////////// right part : online users ////////////////////////////////// -->
+				<div class="onlineUsers">
+					<!-- +++++++++++++++++++++ box 1 : online users +++++++++++++++++++++ -->
+					<div class="onlineUsersBox">
+						<!-- --------------- row 1 : users icon && online Users Number ----------- -->
+						<div class="onlineUsersBoxRow1">
+							<i class="fa fa-users"></i>
+							<span class="onlineUsersNum"><span class="onlineUsersNumVal">98</span> online users</span>
+							<!--  horizontal line -->
+							<div class="onlineUsersBoxRow1Line"></div>
+						</div>
+						<!-- --------------- row 2 : [ Guest && Member ] Number ----------- -->
+						<div class="onlineUsersBoxRow2">
+							<p class="guestAndMemberPara">guest<span class="guestNum"> 91</span> member <span class="memberNum">7</span> </p>
+						</div>
+						<!-- --------------- row 3 : online members box ----------- -->
+						<div class="onlineUsersBoxRow3Box">
+							<h5 class="onlineUsersBoxRow3BoxH5">online members</h5>
+							<p class="onlineUsersBoxRow3BoxPara">mohammed sayed - ali samir - جعفر صادق حبيب  - mostafa34 - isam ahmed - ramy sabry - محمود وليد - wael nabil</p>
+						</div>	
+						<!-- --------------- row 4 : online members box :  Total visit -Yestarday visit - Total visit   ----------- -->
+						<div class="onlineUsersBoxRow4Box">
+							<p class="onlineUsersBoxRow4BoxPara">today visits : <span class="onlineUsersBoxRow4BoxParaNum">11884</span> </p>
+							<p class="onlineUsersBoxRow4BoxPara">yestarday visits : <span class="onlineUsersBoxRow4BoxParaNum">41119</span> </p>
+							<p class="onlineUsersBoxRow4BoxPara">total visits : <span class="onlineUsersBoxRow4BoxParaNum">2399547</span> </p>
+						</div>
+					</div>
+					<!-- +++++++++++++++++++++ box 2 : classifications : التصنيفات +++++++++++++++++++++ -->
+					<div class="onlineUsersBox">
+						<!-- --------------- row 1 : classifications header  ----------- -->
+						<div class="onlineUsersBox2Row1">
+							<p class="classificationsPara"> التصنيفات </p>
+						</div>
+						<!-- --------------- row 2 : list of classifications ----------- -->
+						<!-- //////// Row 2 : sub-Row 1 : جميع التصنيفات //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<p class="onlineUsersBoxRow2SubRowPara"> جميع التصنيفات </p>
+						</div>
+						<!-- //////// Row 2 : sub-Row 2 : (12) بقلم ابراهيم عادل //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara"> <a href="#"> بقلم ابراهيم عادل </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (12) </span>
+							
+						</div>
+						<!-- //////// Row 2 : sub-Row 3 : (451) تطبيق طليق //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">تطبيق طليق </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (451) </span>
+							
+						</div>
+						<!-- //////// Row 2 : sub-Row 4 : (367) مسابقات طليق  //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#"> مسابقات طليق </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (367) </span>
+							
+						</div>
+						<!-- //////// Row 2 : sub-Row 5 : (ٍ2.9)اسئلة عامة  الف    //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#"> اسئلة عامة </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> ( الف 2.9) </span>
+							
+						</div>
+						<!-- //////// Row 2 : sub-Row 6 : (ٍ2.9)اسئلة عامة  الف    //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#"> مسابقات و تحديات</a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (534) </span>
+							
+						</div>
+						<!-- //////// Row 2 : sub-Row 7 : (ٍ718) اقتراحات واستفسارات لمنتدي طليق   //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#"> اقتراحات واستفسارات لمنتدي طليق </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (ٍ718) </span>
+							
+						</div>
+						<!-- //////// Row 2 : sub-Row 8 :  الف (ٍ2.3)  اللغة الانجليزية     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">  اللغة الانجليزية </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (ٍ الف 2.3) </span>
+							
+						</div><!-- //////// Row 2 : sub-Row 9 :  (346)  اللغة الصينية     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#"> اللغة الصينية </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (ٍ 346 ) </span>
+							
+						</div><!-- //////// Row 2 : sub-Row 10 :  (ٍ 191 )  اللغة الالمانيه     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">  اللغة الالمانيه  </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (ٍ346) </span>
+							
+						</div><!-- //////// Row 2 : sub-Row 8 :  (233) اللغة الفرنسية     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">  اللغة الفرنسية  </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum">(233)</span>
+							
+						</div><!-- //////// Row 2 : sub-Row 8 :  (191)  اللغة الاسبانية     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">  اللغة الاسبانية </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (191) </span>
+							
+						</div><!-- //////// Row 2 : sub-Row 8 :  (178) اللغة التركيه     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">  اللغة التركيه  </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (178) </span>
+							
+						</div><!-- //////// Row 2 : sub-Row 8 :  (180)   اللغة الروسية     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#">  اللغة الروسية </a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (180) </span>
+							
+						</div><!-- //////// Row 2 : sub-Row 8 :  الف (ٍ2.3)  اللغة الانجليزية     //////// -->
+						<div class="onlineUsersBoxRow2SubRow">
+							<!-- right part : paragraph -->
+							<span class="onlineUsersBoxRow2SubRowPara">  <a href="#"> تجارب شخصية</a> </span>
+							<!-- left part : number -->
+							<span class="onlineUsersBoxRow2SubRowNum"> (ٍ594) </span>
+							
+						</div>
+						
+					</div>
+					<!-- ********************************** [ answers && questions && users && comments ] numbers section ******************************** -->
+					<div class="answersQuestionsUsersComments">
+						<!-- ================= Box 1 : answers number ================= -->
+						<div class="answersQuestionsUsersCommentsBox">
+							<p class="answersQuestionsUsersCommentsPara1">55.7 الف </p>
+							<p class="answersQuestionsUsersCommentsPara2"> اجابة </p>
+						</div>
+						<!-- ================= Box 2 : questions number ================= -->
+						<div class="answersQuestionsUsersCommentsBox">
+							<p class="answersQuestionsUsersCommentsPara1">9.2 الف </p>
+							<p class="answersQuestionsUsersCommentsPara2"> أسئلة </p>
+						</div>
+						<!-- ================= Box 3 : users number ================= -->
+						<div class="answersQuestionsUsersCommentsBox">
+							<p class="answersQuestionsUsersCommentsPara1">21.4 الف </p>
+							<p class="answersQuestionsUsersCommentsPara2"> مستخدم </p>
+						</div>
+						<!-- ================= Box 4 : comments number ================= -->
+						<div class="answersQuestionsUsersCommentsBox">
+							<p class="answersQuestionsUsersCommentsPara1">32.6 الف </p>
+							<p class="answersQuestionsUsersCommentsPara2"> تعليقات </p>
+						</div>
+					</div>
+					<div class="clearBothDiv"></div>
+					<!-- ********************************** [ welcome in taleek discussion ] section ******************************** -->
+					<div class="welcomeDiscussion">
+						<p class="welcomeDiscussionPara"> 
+							 مرحبا بك الي taleek discussion <br>
+							مناقشات طليق - حيث يمكنك طرح ألاسئلة وانتظار الاجابة عليها من المستخدمين الاخرين . تذكر اننا هنا جميعا لمساعدة بعضنا , 
+							البعض فيرجي الالتزام بقوانين وارشادات المنتدي حتي نبقي عائلة نظيفة وانتاجية - لا ننسي التصويت للاجابات الصحيحة والتصويت بالسالب للاجابات المضللة او المخالفة
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- *************************************** footer section *********************************** -->
+		<div class="footer">
+			<div class="footerContainer">
+				<div class="footerRow1">
+					<img src="images/logo1.png" class="footerImgClass">
+					<span class="footerH4"><a href="#">taleek</a></span>
+				</div>
+				<div class="footerRow2">
+					<ul class="footerRow2Ul">
+						<li class="footerHomeLink"><a href="index.html">Home</a></li>
+						<li class="footerDiscussionLink"><a href="discussion.html">Discussion</a></li>
+						<li class="footerCoursesLink"><a href="courses.html">Courses</a></li>
+						<li class="footerBlogLink"><a href="blog.html">Blog</a></li>
+						<li class="footerAboutLink"><a href="about.html"class="active">About</a></li>
+						<li class="footerContactLink"><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footerRow3">
+					<ul class="footerRow3Ul">
+						<li class="footerVisionLink"><a href="#">Vision</a></li>
+						<li class="footerMissionLink"><a href="#">Mission</a></li>
+						<li class="footerOurTeamLink"><a href="#">Our Team</a></li>
+						<li class="footerJobsLink"><a href="#">Jobs</a></li>
+						<li class="footerTermsLink"><a href="#">Terms & Conditions</a></li>
+						<li class="footerPrivacyLink"><a href="#">Privacy</a></li>
+					</ul>
+				</div>
+				
+				<div class="footerRow4">
+					<ul class="footerRow4Ul">
+						<li class="footerFacebookLink"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="footerTwitterLink"><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li class="footerYoutubeLink"><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li class="footerInstagramLink"><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="footerRow6">
+					<p class="footerCopyRightPara">Copyright &copy; 2021 Taleek Company</p>
+				</div>
+			</div>
+		</div>
+		<!-- ////////////////////////////////// Go Up button //////////////////////////////////	-->
+		<div class="goUpBtn" id="goUpBtnId">
+			<i class="fa fa-fighter-jet"></i>
+		</div>
+		<script src="discussion_javascript.js"></script>
+    </body>
+</html>
+
+    

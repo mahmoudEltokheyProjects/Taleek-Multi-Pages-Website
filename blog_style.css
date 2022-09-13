@@ -1,0 +1,1039 @@
+/*  ########################
+        Global style
+    ########################
+*/
+
+*
+{
+	box-sizing: border-box ;
+	font-family: sans-serif ;
+}
+/* ------------- smooth يطلع للاعلي بشكل  goUp button عشان لما اضغط علي ال ------------- */
+html , body 
+{
+    /*  smooth بشكل  section عشان لما اضغط علي اللينك يتم الانتقال لل */
+	scroll-behavior:smooth ;
+}
+body
+{
+	position: relative ;
+	margin: 0 ;
+    padding: 0 ;
+	height: auto;
+}
+/* --------------------------------- body ovelay layer ------------------------ */
+.bodyOverlay
+{
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+	height: 100% ;
+	width: 100% ;
+	z-index: 999 ;
+	background-color: rgba(0,0,0,0.8);
+	display: none ;
+}
+
+/*  ################################################################################################
+										navbar section  style
+    ################################################################################################
+*/
+.navbar
+{
+	position: relative;
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;*/
+	z-index: 999 ;
+	background-color: #264380 ;
+}
+
+.navbar .navbarContainer
+{
+	width: 85% ;
+	margin: 0px auto ;
+	height: auto;
+	overflow: hidden ;
+/*	border: 2px solid #0f0 ;*/
+	
+}
+/* ************** logo part ******************** */
+.navbar .navbarContainer .logo
+{
+	width: 22% ; 
+	height: 66px;
+	float: left ;
+/*	border: 2px solid #ff0 ;	*/
+	text-transform: capitalize ;
+	font-weight: 500 ;
+/*	direction: rtl ;*/
+}
+/* ************** logo part : <span></span> ******************** */
+.navbar .navbarContainer .logo span
+{
+	float: left ;
+	font-size: 18px;
+	margin-top: 20px ;
+	margin-left: 5px ;
+	color: #fff ;
+}
+/* ************** links part ******************** */
+.navbar .navbarContainer  .navbarLinks
+{
+	width: 78% ; 
+	float: right ;
+	text-align: right ;
+/*	border: 2px solid #f0f ;	*/
+}
+/* ************** links part : <ul> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul
+{
+	list-style: none ;
+	margin-top: 22px ;
+}
+/* ************** links part : <ul> <li></li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li
+{
+	display: inline-block ;
+	margin-right: 10px ;
+}
+/* ************** links part : <ul> <li> <a></a> </li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li a
+{
+	text-decoration: none ;
+	font-size: 18px ;
+	text-transform: capitalize;
+	color: rgb(131,148,183) ;
+	transition: 0.5s ease ;
+}
+.navbar .navbarContainer  .navbarLinks  ul  li a.active
+{
+	color: rgb(223,227,236) ;
+}
+.navbar .navbarContainer  .navbarLinks  ul  li a:hover
+{
+	color: rgb(223,227,236) ;
+}
+/* ************** links part : <ul> <li> <img> </li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li  img
+{
+	width: 25px ;
+	height: 25px ;
+	margin-bottom: -6px;		
+}
+/* ----------------------- menubar icon  ----------------------------- */
+.navbar .navbarContainer input
+{
+	position: absolute ;
+	top: 5px ;
+	right: 5px ;
+	display: none ;
+}
+.navbar .navbarContainer  .menubarLabel
+{
+	position: absolute;
+	top:15px; 
+	right: 5px ;
+/*	border: 2px solid #ff0;*/
+	cursor: pointer;
+	/* from  "0px" to "970px" في الشاشات المحمول  */
+	display: none ;
+}
+.navbar .navbarContainer  .menubarLabel .menubarDiv1  ,
+.navbar .navbarContainer  .menubarLabel .menubarDiv2  ,
+.navbar .navbarContainer  .menubarLabel .menubarDiv3  
+{
+	margin: 6px;
+	width: 40px;
+	height: 6px;
+	padding: 1px;
+	background-color: #fff ;
+	/* smooth يحصل التحول بشكل x الي علامة ال menubar icon عشان لما يحصل تحويل لل */
+	transition: 0.4s ;
+}
+/* ################################## Responsive ########################################## */
+@media(min-width:0px) and (max-width:736px)
+{
+	/* ---------------------- navbar 1 -----------------------	*/
+	.navbar .navbarContainer  .menubarLabel
+	{
+		display: block ;
+	}
+	/* ************** logo part ******************** */
+	.navbar .navbarContainer .logo
+	{
+		width: 100% ; 
+	}
+	/* ************** links part ******************** */
+	.navbar .navbarContainer  .navbarLinks
+	{
+		width: 100% ; 
+		clear: both ;
+		margin: 10px auto;
+		text-align: center ;
+/*		border: 2px solid #f0f ;*/
+		display: none ;
+	}
+	/* ************** links part ******************** */
+	.navbar .navbarContainer  .navbarLinks ul li
+	{
+		display: block ;
+		margin: 25px ;
+	}
+	/* ************** logo part : <span></span> ******************** */
+	.navbar .navbarContainer .logo span
+	{
+		direction: rtl ;
+		position: absolute ;
+		right: 15px ;
+	}
+	
+}
+/* ################################## Responsive ########################################## */
+@media(min-width:0px) and (max-width:1146px)
+{
+	/* ---------------------- navbar 2 : هخفي هذه الايقونات -----------------------	*/
+	#facebookId   ,
+	#youtubeId 	  ,
+	#instagramId  , 
+	#twitterId
+	{
+		display: none ;
+	}
+	
+	/* ******************************** navbar 2 section : left part :links  ******************************** */
+	.navbar2  .navbar2Container .navbar2Links
+	{
+		display: none ;
+	}
+}
+@media(min-width:737px) and (max-width:891px)
+{
+	/* ************** logo part : <span></span> : current date ******************** */
+	.navbar .navbarContainer .logo span
+	{
+		font-size: 14px;
+		padding-top: 5px ;
+		font-weight: bold ;
+	}
+}
+/* *************************************** navbar 2 section *********************************** */
+.navbar2
+{
+	display: block ;
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;*/
+	z-index: 999 ;
+	background-color: #fff ;
+	box-shadow: 1px 2px 5px #999 ;
+	margin-bottom: 30px ;
+}
+.navbar2  .navbar2Container
+{
+	width: 85% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f; */
+	margin: 10px auto ;
+}
+/* **************************************** navbar 2 : right links ************************************ */
+.navbar2  .navbar2Container  .navbar2Links
+{
+/*	border: 2px solid #ff0 ; */
+	width: 67.5% ;
+	float: right ;
+}
+.navbar2  .navbar2Container  .navbar2Links	ul
+{
+	list-style: none ;
+	direction: rtl;
+	margin: 0 ;
+	padding: 11px 0px ;
+}
+.navbar2  .navbar2Container  .navbar2Links	ul  li
+{
+	display: inline-block ;
+	padding-bottom: 5px ;
+}
+.navbar2  .navbar2Container  .navbar2Links	ul  li  a
+{
+	text-decoration: none ;
+	color: #000 ;
+	margin: 5px ;
+	text-transform: capitalize ;
+	font-weight: bold ;
+	font-size: 16px ;
+}
+.navbar2  .navbar2Container  .navbar2Links	ul  li  a  img
+{
+	width: 40px; 
+	height: 40px ;
+	margin-bottom: -13px;
+/*	border: 2px solid #f0f ; */
+}
+/* **************************************** navbar 2 : left links  ******************************** */
+.navbar2  .navbar2Container  .logo2
+{
+/*	border: 2px solid #f0f ;  */
+	width: 32.5% ;
+	float: left;
+	height: auto ;
+	overflow: hidden ;
+}
+.navbar2  .navbar2Container  .logo2		ul
+{
+	list-style: none ;
+	padding-top: 20px ;
+	margin: 0 ;
+}
+.navbar2  .navbar2Container  .logo2		ul	li.navbar2Li
+{
+	display: inline-block ;
+	margin: 5px ;
+	padding-bottom: 10px ;
+}
+.navbar2  .navbar2Container  .logo2		ul	 li  a
+{
+	text-decoration: none ;
+	background-color: rgb(242,242,242) ;
+	color: #000 ;
+	padding: 12px ;
+	border-radius: 50% ;
+}
+.navbar2  .navbar2Container  .logo2		ul	 li  a    i
+{
+	font-size: 18px ;	
+}
+/*  /////////////////////// navbar 2 : menubar <li> /////////////////////// */
+.navbar2  .navbar2Container  .logo2		ul	 .navbar2MenubarLi
+{
+	position: relative;
+	top: 14px ;
+	display: inline-block ;
+	width: 40px ;
+	height: 40px;
+/*	border: 2px solid #0ff ; */
+	background-color: rgb(242,242,242) ;
+	color: #000 ;
+	padding-top: 12px ; 
+	padding-left: 12px ; 
+	border-radius: 50% ;
+	cursor: pointer ;
+	display: none ;
+}
+
+/* ------------------------ navbar 2 : checkbox : <input> --------------------------- */
+.navbar2  .navbar2Container  .logo2		ul	.navbar2MenubarLi  #checkbox2Id
+{
+	position: absolute ;
+	top: 5px ;
+	right: 5px ;
+	display: none ;
+}
+/*  /////////////////////// navbar 2 : menubar label : 3 <div> /////////////////////// */
+.navbar2  .navbar2Container  .logo2		ul	.navbar2MenubarLi   .menubar2Label	div
+{
+/*	border: 2px solid #0f0 ; */
+	display: block ;
+	width: 15px ;
+	height:3px ;
+	margin-bottom: 3px ;
+	background-color: #000 ;
+	cursor: pointer ;
+}
+
+/* ################################## Responsive ########################################## */
+@media(min-width:0px) and (max-width:736px)
+{
+	.navbar2 .navbar2Container  .menubar2Label
+	{
+		display: block ;
+	}
+	.navbar2 .navbar2Container .navbar2Links 
+	{
+		display: none ;
+	}
+}
+/* ################################## Responsive ########################################## */
+@media(min-width:0px) and (max-width:1146px)
+{
+
+	.navbar2  .navbar2Container
+	{
+		padding: 0 ;
+		margin: 0 ;
+	}
+
+	.navbar2  .navbar2Container  .logo2
+	{
+		display: block ;
+		width: 100% ;
+		float: none ;
+		/* border: 2px solid #f0f; */
+		margin: 0 ;
+		padding-left: 20px ;
+		padding-bottom: 5px ;
+	}
+	/*  /////////////////////// navbar 2 : menubar <li> /////////////////////// */
+	.navbar2  .navbar2Container  .logo2		ul
+	{
+		padding: 0; 
+		margin: 0 ;
+	}
+	/*  /////////////////////// navbar 2 : menubar <li> /////////////////////// */
+	.navbar2  .navbar2Container  .logo2		ul	 .navbar2MenubarLi
+	{
+		display: inline-block ;
+	}
+}
+
+/* ****************** sideNavbar 2 : will be displayed in small screen ************** */
+.sideNavbar2Links
+{
+	position: fixed ;
+	right: 0 ;
+	top: 0 ;
+	height: 100% ;
+	width: 0 ;
+	/* -----------------  navbar 1 فوق كل العناصر وفوق ال sideNavbar هيظهر ال -----------------  */
+	z-index: 1000 ;
+/*	border: 2px solid #f00 ; */
+	direction: rtl ;
+/*	margin-top: 65px ;*/
+	background-color: #fff ;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s ease-in-out ;
+}
+.sideNavbar2Links	ul
+{
+	list-style: none ;
+}
+.sideNavbar2Links	ul	li
+{
+	margin-bottom: 20px ;
+}
+.sideNavbar2Links	ul	li	a
+{
+	text-decoration: none ;
+	color: #000 ;
+	text-transform: capitalize ;
+	font-size: 20px;
+	transition: 0.3s ease-in-out ;
+}
+/*  ****************** close icon ******************  */
+.sideNavbar2Links	ul	li	a.closeIcon
+{
+	position: absolute;
+	top: 10px ;
+	left: 20px ;
+	font-size: 45px; 
+}
+.sideNavbar2Links	ul	li  a:hover
+{
+    color: rgb( 255 , 0 , 255 ); 
+}
+/* ************************************** search field  ************************************ */
+.searchFieldBlock
+{
+	position: absolute ;
+	top: 0 ;
+	right: 0 ;
+	width: 0 ;
+	height: 100% ;
+	z-index: 999 ;
+	background-color: #fff ;
+	transition: 0.8s ease-in-out ;
+}
+.searchFieldBlock  input[type=text]
+{
+	width: 100% ;
+	padding: 10px 50px  ;
+	border: 0 ;
+	outline: 0 ;
+	margin-top: 250px ;
+	direction: rtl ;
+	font-size: 25px ;
+	display: none ;
+}
+.searchFieldBlock  input[type=text]::-webkit-input-placeholder
+{	
+	color: #000 ;
+	text-transform: capitalize ;
+}
+.searchFieldBlock  .closeIcon
+{
+	position: absolute;
+	font-size: 45px ;
+ 	right : 20px ;
+	top: 20px ;
+	cursor: pointer ;
+	/*  search icon بحيث هتظهر لما اضغط علي ال closeIcon هخفي ال */
+	display: none ;
+}
+.searchFieldBlock	.lineUnderSearchField
+{
+	width: 90% ;
+	height: 2px ;
+	padding: 1px ;
+	background-color: #111 ;
+	float: right ;
+	margin-right: 50px ;
+}
+/* *************************************** blog section *************************************** */
+.blog
+{
+	width: 100% ; 
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;  */
+	padding-top: 80px ;
+}
+.blog  .blogContainer
+{
+	width: 90% ; 
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0 ;  */
+	margin: 10px auto ;
+}
+/* ############## left part column ############## */
+/* ############## right part column ############## */
+.blog  .blogContainer .blogLeftColPart  ,
+.blog  .blogContainer .blogRightColPart
+{
+	height: auto ;
+	overflow: hidden ;
+}
+/* ################################################ left part column ################################################# */
+.blog  .blogContainer .blogLeftColPart
+{
+	float: left ;
+	/* total_width = width + margin_right = 35 + 1 = 36%	*/
+	width: 35% ;
+	margin-right: 1% ;
+/*	border: 2px solid #0ff ;  */
+	
+}
+.blog  .blogContainer .blogLeftColPart  .blogLeftColPartH2
+{
+	font-size: 25px ;
+	text-align: right ;
+	margin-right: 10px ;
+	border-bottom: 1px  solid #999 ;
+	padding-bottom: 10px; 
+}
+.blog  .blogContainer .blogLeftColPart  .blogLeftColPartHorizLine
+{
+	width: 0% ;
+	background-color: #999 ;
+	height: 2px ;
+	padding: 1px ;
+	margin-right: -10px ;
+}
+/* ############## carousel ##############  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel 
+{
+/*	border: 2px solid #0f0 ;  */
+	width: 400%;
+	height: auto ;
+	overflow: hidden;
+	animation: carouselAnimate 20s  infinite ;
+}
+/* ############## carousel animation ##############  */
+@keyframes carouselAnimate
+{
+	0%
+	{
+		transform: translateX(0%);
+	}
+	25%
+	{
+		transform: translateX(-25%);
+	}
+	50%
+	{
+		transform: translateX(-50%);
+		animation-delay: 150s ;
+	}
+	75%
+	{
+		transform: translateX(-75%);
+	}
+	100%
+	{
+		transform: translateX(0%);
+	}
+}
+/* ############## carousel : <ul></ul>  ##############  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul
+{
+	list-style: none ;
+	margin: 0 ;
+	padding: 0 ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0; 	 	*/
+}
+/* ############## carousel : <ul> <li></li> </ul>  ##############  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li
+{
+	position: relative ;		
+	width: 25% ;
+	width: 25% ;
+	height: 350px ;
+	overflow:hidden ;
+	float: left ;
+/*	border: 2px solid #f00; 		*/
+}
+/* ############## carousel : <ul> <li></li> </ul>  ##############  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.carouselMainImg
+{
+	width: 100% ;
+	height: 350px;
+}
+/*  /////////// overlay layer ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	 .overlayImg
+{
+	position: absolute;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 100% ;
+	background-color: rgba(0,0,0,0.2) ;
+	z-index: 999 ;
+}
+/*  /////////// overlay layer ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg span.carouselSpan
+{
+	position: absolute ;
+	top: 10px ;
+	left: 10px ;
+	background-color: #000 ;
+	color: #fff ;
+	border-radius: 10px ;
+	padding-left: 15px ;
+	padding-right: 15px ;
+	padding-top: 8px ;
+	padding-bottom: 8px ;
+	text-transform: uppercase;
+	font-size: 12px ;
+}
+/*  /////////// overlay layer : <p></p> ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg	 .carouselPara
+{
+	position: absolute ;
+	bottom: 25px ;
+	right: 10px ;
+	color: #fff ;
+	font-size: 25px ;
+	text-transform: capitalize ;
+}
+/*  /////////// overlay layer : account image icon ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg	.accountAndDate .accountImg
+{
+	position: absolute ;
+	bottom: 10px ;
+	right: 10px ;
+	width: 30px ;
+	height: 30px ;
+	border-radius: 50% ;
+}
+/*  /////////// overlay layer : account name ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg	.accountAndDate .accountName
+{
+	position: absolute ;
+	bottom: 15px ;
+	right: 50px ;	
+	color: #fff ;
+	font-weight: bold ;
+}
+/*  /////////// overlay layer : account clock icon ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg	.accountAndDate .accountDateIcon
+{
+	position: absolute ;
+	bottom: 13px ;
+	right: 155px ;	
+	color: #fff ;
+	font-size: 16px ;
+/*	border: 2px solid #f0f ;*/
+}
+/*  /////////// overlay layer : account date  ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg	.accountAndDate .accountDate
+{
+	position: absolute ;
+	bottom: 18px ;
+	right: 155px ;	
+	color: #fff ;
+	font-size: 14px ;	
+/*	border: 2px solid #0ff ; */
+}
+/* ########################################## left part  2  ########################################## */
+.blog  .blogContainer  .blogLeftPart2
+{
+/*	border: 4px solid #ff0; 	*/
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+	margin-top: 160px ;
+	margin-bottom: 50px ;
+}
+/* ################ left part  2 :  blog box  ################# */
+.blog  .blogContainer  .blogLeftPart2  .blogLeftPartBox
+{
+	width: 90% ;
+	height: auto ;
+	overflow: hidden ;
+	background-color: #000 ;
+	margin-top: 3% ;
+	margin-left: 5% ;
+	margin-right: 5% ;
+	padding: 12px ;
+	border-radius: 10px ;
+}
+/* ################ left part  2 :  blog box title : right part  ################# */
+.blog  .blogContainer  .blogLeftPart2  .blogLeftPartBox  .blogLeftPartBoxTitle
+{
+	float: right;
+	margin-right: 10px ;
+	text-transform: capitalize ;
+	padding-top: 5px ;
+}
+.blog  .blogContainer  .blogLeftPart2  .blogLeftPartBox  .blogLeftPartBoxTitle  a
+{
+	text-decoration: none ;
+	color: #fff ;
+}
+
+/* ################ left part  2 :  blog box Circle Num : right part  ################# */
+.blog  .blogContainer  .blogLeftPart2  .blogLeftPartBox  .blogLeftPartBoxCircleNum
+{
+	float: left;
+	width: 30px ;
+	height: 30px ;
+	text-align: center ;
+	color: #fff ;
+	background-color: #fff ;
+	color: #000 ;
+	border-radius: 50% ;
+	margin-left: 10px ;
+	padding-top: 7px ;
+}
+/* ########################################## left part  3  ########################################## */
+.blog  .blogContainer .blogLeftPart3
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+	margin-top: 580px; 
+/*	border: 2px solid #f0f ;	*/
+} 
+/* ********* left part 3 : blog link 1 *********  */
+.blog  .blogContainer .blogLeftPart3  .blogLeftColPartPara
+{
+	width: 97% ;
+	border-bottom: 1px solid #999 ;
+	padding-bottom: 10px ;
+	direction: rtl;
+}
+.blog  .blogContainer .blogLeftPart3  .blogLeftColPartPara  a
+{
+	text-decoration: none; 
+	color: #000;
+	font-weight: bold ;
+	color: #444 ;
+}
+/* ######################################################## right part column ###################################################  */
+.blog  .blogContainer .blogRightColPart
+{
+	float: right ;
+	/* total_width = width + left = 63 + 1 = 64%	*/
+	width: 63% ;
+	margin-left: 1% ;
+/*	border: 2px solid #f0f ;	*/
+}
+/*  ############################### box img ############################### */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox
+{
+	width: 48% ;
+	margin: 1% ;
+	float: left ;
+	border-radius: 10px ;
+/*	border: 2px solid #ff0 ; */
+	border-radius: 10px ;
+	direction: rtl ;
+}
+/*  //////////////////////////// part 1 : box img ////////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox  .blogRightPartBoxMainImg  
+{
+/*	border: 2px solid #f00 ;	*/
+	position: relative ;
+}
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox  .blogRightPartBoxMainImg  img
+{
+	width: 100% ;
+	border-radius: 10px ;
+}
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox  .blogRightPartBoxMainImg  .carouselSpan
+{
+	position: absolute ;
+	top: 10px ;
+	left: 10px ;
+	background-color: #000 ;
+	color: #fff ;
+	border-radius: 10px ;
+	padding-left: 15px ;
+	padding-right: 15px ;
+	padding-top: 7px ;
+	padding-bottom: 7px ;
+	text-transform: uppercase;
+	font-size: 11px ;
+/*	border: 2px solid #f00; */
+}
+/* ////////////////////////  part 2 : box info ///////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo
+{
+/*	border: 2px solid #0ff ; */
+}
+/* ------------------------ header under image --------------------------- */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo  .carouselPara
+{
+	display: block ;
+	font-size: 21px ;
+	font-weight: bold ;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+/*	border: 2px solid #00f ;	*/
+	text-transform: capitalize;
+}
+/* ////////////////////////  part 3 : box account info  ///////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo .accountAndDateRightBox
+{
+	position: relative ;
+	height: 35px ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0 ;	*/
+	color: rgb(129,129,129) ;
+}
+/* ////////////////////////  part 3 : box account info : account image <img> ///////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo .accountAndDateRightBox  .accountImgRightBox
+{
+	position: absolute ;
+	bottom: 0px ;
+	right: 10px ;
+	width: 30px ;
+	height: 30px ;
+	border-radius: 50% ;
+}
+/* ////////////////////////  part 3 : box account info : accout name  ///////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo .accountAndDateRightBox  .accountNameRightBox
+{
+	position: absolute ;
+	bottom: 5px ;
+	right: 50px ;	
+	color: rgb(129,129,129) ;
+}
+/* ////////////////////////  part 3 : box account info : account Date : icon ///////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo .accountAndDateRightBox  .accountDateIconRightBox
+{
+	position: absolute ;
+	bottom: 2px ;
+	right: 150px ;	
+	color: rgb(129,129,129) ;
+	font-size: 18px ;	
+}
+
+/* ////////////////////////  part 3 : box account info : account Date  ///////////////////////  */
+.blog  .blogContainer .blogRightColPart	.blogRightPartBox .blogRightPartBoxInfo .accountAndDateRightBox  .accountDateRightBox
+{
+	position: absolute ;
+	bottom: 6px ;
+	right: 170px ;	
+	color: #000 ;
+	font-size: 15px ;	
+	color: rgb(129,129,129) ;
+}
+/*  /////////// overlay layer : account date  ///////////  */
+.blog  .blogContainer .blogLeftColPart	.blogLeftColPartCarousel ul	li	.overlayImg	.accountAndDate .accountDate
+{
+	position: absolute ;
+	bottom: 15px ;
+	right: 180px ;	
+	color: #fff ;
+	font-size: 14px ;	
+}
+/* ######################################################### Responsive ###################################################### */
+@media(min-width:0px) and (max-width:1070px)
+{
+	/* ########################################### left part 1 column ################################ */
+	/* ########################################### right part column  ###############################  */
+	.blog  .blogContainer .blogLeftColPart  ,
+	.blog  .blogContainer .blogRightColPart
+	{
+		float: left ;
+		/* total_width = width + margin_right = 90 + 5 + 5 = 100%	*/
+		width: 90% ;
+		margin-left: 5% ;
+		margin-right: 5% ;
+		margin-bottom: 5% ;
+	}
+}
+@media(min-width:0px) and (max-width:757px)
+{
+	/* ############################################ right part column ########################################  */	
+	/*  ############################### box img ############################### */
+	.blog  .blogContainer .blogRightColPart	.blogRightPartBox
+	{
+		width: 90% ;
+		margin-top: 3% ;
+		margin-left: 5% ;
+		margin-right: 5% ;
+		float: none ;
+	}
+}
+/* ********************************************** footer section ****************************************** */
+.footer 
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0; */
+	background-color: rgb(40,60,106) ;
+}
+.footer  .footerContainer
+{
+	width: 80% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0; */
+	margin: 0px auto ;
+	margin-top: 30px ;
+	text-align: center ;
+}
+/* ------------------------------------------ row 1 ---------------------------------------- */
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------------------------------ row 5 ---------------------------------------- */
+/* ------------------------------------------ row 6 ---------------------------------------- */
+/* ------------------------------------------ row 7 ---------------------------------------- */
+.footer  .footerContainer  .footerRow1 ,
+.footer  .footerContainer  .footerRow2 ,
+.footer  .footerContainer  .footerRow3 ,
+.footer  .footerContainer  .footerRow4 , 
+.footer  .footerContainer  .footerRow5 ,
+.footer  .footerContainer  .footerRow6 ,
+.footer  .footerContainer  .footerRow7
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f; */
+	
+}
+/* ------------------- row 1 : left part : image ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerImgClass
+{
+	width: 55px  ;
+	height: 55px ;
+	margin-bottom: -12px ;
+	margin-right: 15px ;
+}
+/* ------------------- row 1 : right part : h4 <a></a> ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerH4  a
+{
+	font-size: 40px ;
+	color: #fff ;
+	text-decoration: none ;
+	text-transform: capitalize ;
+}
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------ row 2 : <ul></ul> ---------------------- */
+/* ------------------ row 3 : <ul></ul> ---------------------- */
+/* ------------------ row 4 : <ul></ul> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow3Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow4Ul
+{
+	list-style: none ;
+	margin-top: 30px ;
+	margin-bottom: 0 ;
+}
+/* ------------------ row 2 : <li></li> ---------------------- */
+/* ------------------ row 3 : <li></li> ---------------------- */
+/* ------------------ row 4 : <li></li> ---------------------- */
+/* ------------------ row 7 : <li></li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  
+{
+	display: inline-block ;
+	margin-left: 15px ;
+	margin-right: 15px ;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* ------------------ row 2 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 3 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 7 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  a  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  a  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  a
+{
+	color: #fff ;	
+	text-decoration: none ;
+	font-size: 16px ;
+}
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a
+{
+	font-size: 25px;
+	transition: 0.5s ease ;
+}
+/* ---------------- row 4 : <li> <a></a> </li> : social Media[ facebook , twitter, youtube , instagram]:hover ------------------ */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a:hover
+{
+	color: #D1335B ;
+}
+/* ------------------ row 6 : <p> </p> ---------------------- */
+.footer  .footerContainer  .footerRow6  .footerCopyRightPara    
+{
+	color: #fff ;
+	font-size: 18px ;
+}
+
+/* ////////////////////////////////// Go Up button //////////////////////////////////  */
+.goUpBtn
+{
+	position: fixed;
+	/*  عشان يظهر فوق اي عنصر حيث في الشاشات الصغيرة هيكون ظاهر في اي عنصر يمر به */
+	z-index: 999 ;
+	bottom: 10px ;
+	right: 5px ;
+	padding: 15px ;
+/*	border: 2px solid #f00;*/
+	background-color: #555 ;
+	color: #fff;
+	border-radius: 50%; 
+	border: 0 ;
+	outline: 0 ;
+	cursor: pointer ;
+	/* 	 هيتم اخفاء الزرار وهيتم اظهاره لما انزل مسافة 400 بيكسل بحيث لما اضغط علي هذا الزرار يطلعني لبداية الصفحة */
+	display: none ;
+}
+
+.goUpBtn  .fa.fa-fighter-jet
+{
+    transform: rotate(-90deg) ;  
+	font-size: 25px ; 
+	color: gold ;
+}

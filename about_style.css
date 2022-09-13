@@ -1,0 +1,612 @@
+/*  ########################
+        Global style
+    ########################
+*/
+
+*
+{
+	box-sizing: border-box ;
+	font-family: sans-serif ;
+}
+/* ------------- smooth يطلع للاعلي بشكل  goUp button عشان لما اضغط علي ال ------------- */
+html , body 
+{
+    /*  smooth بشكل  section عشان لما اضغط علي اللينك يتم الانتقال لل */
+	scroll-behavior:smooth ;
+}
+body
+{
+	margin: 0 ;
+    padding: 0 ;
+	height: auto;
+}
+/*  ################################################################################################
+										navbar section  style
+    ################################################################################################
+*/
+.navbar
+{
+	position: fixed;
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;*/
+	z-index: 999 ;
+	background-color: #264380 ;
+}
+.navbar .navbarContainer
+{
+	width: 85% ;
+	margin: 0px auto ;
+	height: auto;
+	overflow: hidden ;
+/*	border: 2px solid #0f0 ;*/
+	
+}
+/* ************** logo part ******************** */
+.navbar .navbarContainer .logo
+{
+	width: 15% ; 
+	height: 66px;
+	float: left ;
+/*	border: 2px solid #ff0 ;	*/
+	text-transform: capitalize ;
+	font-weight: 500 ;
+}
+/* ************** logo part : <img> ******************** */
+.navbar .navbarContainer .logo  a  img
+{
+	float: left ;
+	width: 55px ;
+	height: 55px ;
+/*	border: 2px solid #f00 ; */
+	margin-top: 5px ;
+	border-radius: 50% ;
+	background-color: #fff ;
+}
+/* ************** logo part : <span></span> ******************** */
+.navbar .navbarContainer .logo span
+{
+	float: left ;
+	font-size: 25px;
+	margin-top: 20px ;
+	margin-left: 5px ;
+	color: #fff ;
+}
+/* ************** links part ******************** */
+.navbar .navbarContainer  .navbarLinks
+{
+	width: 85% ; 
+	float: right ;
+	text-align: right ;
+/*	border: 2px solid #f0f ;	*/
+}
+/* ************** links part : <ul> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul
+{
+	list-style: none ;
+	margin-top: 22px ;
+}
+/* ************** links part : <ul> <li></li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li
+{
+	display: inline-block ;
+	margin-right: 10px ;
+}
+/* ************** links part : <ul> <li> <a></a> </li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li a
+{
+	text-decoration: none ;
+	font-size: 18px ;
+	text-transform: capitalize;
+	color: rgb(131,148,183) ;
+	transition: 0.5s ease ;
+}
+.navbar .navbarContainer  .navbarLinks  ul  li a.active
+{
+	color: rgb(223,227,236) ;
+}
+.navbar .navbarContainer  .navbarLinks  ul  li a:hover
+{
+	color: rgb(223,227,236) ;
+}
+/* ************** links part : <ul> <li> <img> </li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li  img
+{
+	width: 25px ;
+	height: 25px ;
+	margin-bottom: -6px;		
+}
+/* ----------------------- menubar icon  ----------------------------- */
+.navbar .navbarContainer input
+{
+	position: absolute ;
+	top: 5px ;
+	right: 5px ;
+	display: none ;
+}
+.navbar .navbarContainer  .menubarLabel
+{
+	position: absolute;
+	top:15px; 
+	right: 5px ;
+/*	border: 2px solid #ff0;*/
+	cursor: pointer;
+	/* from  "0px" to "970px" في الشاشات المحمول  */
+	display: none ;
+}
+.navbar .navbarContainer  .menubarLabel .menubarDiv1  ,
+.navbar .navbarContainer  .menubarLabel .menubarDiv2  ,
+.navbar .navbarContainer  .menubarLabel .menubarDiv3  
+{
+	margin: 6px;
+	width: 40px;
+	height: 6px;
+	padding: 1px;
+	background-color: #fff ;
+	/* smooth يحصل التحول بشكل x الي علامة ال menubar icon عشان لما يحصل تحويل لل */
+	transition: 0.4s ;
+}
+.navbar .navbarContainer input:checked ~  .menubarLabel .menubarDiv1  
+{
+	transform: rotate(-45deg) translate(-8px, 9px) ;
+}
+.navbar .navbarContainer input:checked ~  .menubarLabel .menubarDiv2 
+{
+	opacity: 0 ;
+}
+.navbar .navbarContainer input:checked ~  .menubarLabel .menubarDiv3  
+{
+	transform: rotate(45deg) translate(-8px, -9px) ;
+}
+.navbar .navbarContainer input:checked ~     .navbarLinks
+{
+	display: block ;
+}
+/* ################################################# Responsive ################################################# */
+@media(min-width:0px) and (max-width:736px)
+{
+	.navbar .navbarContainer  .menubarLabel
+	{
+		display: block ;
+	}
+	/* ************** logo part ******************** */
+	.navbar .navbarContainer .logo
+	{
+		width: 100% ; 
+	}
+	/* ************** links part ******************** */
+	.navbar .navbarContainer  .navbarLinks
+	{
+		width: 100% ; 
+		clear: both ;
+		margin: 10px auto;
+		text-align: center ;
+/*		border: 2px solid #f0f ;*/
+		display: none ;
+	}
+	/* ************** links part ******************** */
+	.navbar .navbarContainer  .navbarLinks ul li
+	{
+		display: block ;
+		margin: 25px ;
+	}
+
+}
+/* *************************************** about section *********************************** */
+.about
+{
+	position: relative ;
+/*	border: 2px solid #0ff;  */
+	width: 100%;
+	height: auto ;
+	overflow: hidden ;
+	padding-top: 80px;
+	background-color: #fff ;
+}
+.about  .aboutContainer
+{
+/*	border: 2px solid #f0f;  */
+	width: 90%;
+	height: auto ;
+	overflow: hidden ;
+	margin: 10px auto ;
+}
+.about  .aboutContainer  .aboutH2
+{
+	text-transform: capitalize ;
+	color: rgb(38,67,128) ;
+	font-size: 35px;
+	margin-top : 20px ;
+	margin-bottom: 20px ;
+	text-align: center ;
+}
+.about  .aboutContainer   .aboutHeaderListContainer
+{
+/*	border: 2px solid #ff0 ; */
+	width:75%;
+	height: auto ;
+	overflow: hidden ;
+	margin: 10px auto ;
+	text-align: center ;
+}
+.about  .aboutContainer   .aboutHeaderListContainer  ul
+{
+	list-style: none ;
+	margin: 0 ;
+	padding: 0 ;
+}
+.about  .aboutContainer   .aboutHeaderListContainer  ul  li
+{
+	display: inline-block ;
+/*	border: 2px solid #00f  ;  */
+	width: 15.85% ;
+	margin: 0.5% ;
+	height: 130px ;
+	overflow: hidden ;
+/*	padding-top: 50px; */
+}
+.about  .aboutContainer   .aboutHeaderListContainer  ul  li  .listHeaderImg
+{
+	display: block ;
+	width: 100% ;
+	height:auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0 ; */
+	margin: 10px auto ;
+}
+.about  .aboutContainer   .aboutHeaderListContainer  ul  li  .listHeaderImg  img
+{
+	width: 50% ;
+}
+.about  .aboutContainer   .aboutHeaderListContainer  ul  li  .headerUnderImg  
+{
+	display: block ;
+	margin-top: 5px; 
+	font-size: 16px ;
+	text-transform: capitalize;
+	color: rgb(93,93,93) ;
+}
+.about  .aboutContainer   .aboutHeaderListContainer  ul   .verticalLine
+{
+	display: inline-block ;
+	width: 1px ;
+	height: 45px;
+	padding: 1px ;
+	background-color: rgb(38,67,128) ;
+	margin-bottom: 60px;
+}
+/* ################################## Responsive ################################## */
+@media (min-width:0px) and (max-width:609px)
+{
+	.about  .aboutContainer   .aboutHeaderListContainer
+	{
+		margin-bottom: 50px ;
+		padding-bottom: 10px ;
+	}
+	.about  .aboutContainer   .aboutHeaderListContainer  ul  li
+	{
+		width: 90% ;
+		margin-left: 5% ;
+		margin-right: 5% ;
+		height: auto ;
+		display: block ;
+/*		border: 2px solid #00f ; */
+	}
+	.about  .aboutContainer   .aboutHeaderListContainer  ul   .verticalLine span
+	{
+		display: block ;
+		float: none ;
+		margin: 20px auto ;
+	}
+	/* remove line :  blocks هحذف الخط بين ال  */
+	.about  .aboutContainer   .aboutHeaderListContainer  ul   .verticalLine 
+	{
+		display: none ;
+	}
+}
+@media (min-width:610px) and (max-width:950px)
+{
+	.about  .aboutContainer   .aboutHeaderListContainer  ul  li
+	{
+		float: left ;
+		width: 46% ;
+		margin-left: 2% ;
+		margin-right: 2% ;
+		margin-top: 20px ;
+		height: auto ;
+	}
+	/* ///////////////////////  <li></li> أخر : job icon ///////////////////////	*/
+	.about  .aboutContainer   .aboutHeaderListContainer  ul  li:last-of-type
+	{
+		width: 46% ;
+		margin-left: 27% ;
+		margin-right: 27% ;
+		float: none ;
+	}
+	/* remove line :  blocks هحذف الخط بين ال  */
+	.about  .aboutContainer   .aboutHeaderListContainer  ul   .verticalLine 
+	{
+		display: none ;
+	}
+}
+/*  ******************************************** about body section **************************************** */
+.about  .aboutContainer .aboutBodyContainer
+{
+	display: block ;
+	width: 85%;
+	height: auto ;
+	overflow: hidden ;
+	margin: 10px auto ;
+/*	border: 2px solid #f0f ;	*/
+}
+.about  .aboutContainer .aboutBodyContainer  .aboutleftPart
+{
+	float: left ;
+	width: 15% ;
+	margin-top: 1% ;
+	margin-right: 1% ;
+/*	border: 2px solid #f00 ;*/
+}
+.about  .aboutContainer .aboutBodyContainer  .aboutleftPart img
+{
+	width: 100% ;
+}
+/* ########### right part : info ########### */
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart
+{
+	float: right ;
+	width: 75% ;
+/*	border: 2px solid #0f0 ;*/
+} 
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartH3
+{
+	font-size: 55px ;
+	margin-top: 30px ;
+	margin-bottom: 10px ;
+}
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara1  , 
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara2  ,
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara3	, 
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara4	,
+.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara5
+{
+	font-size: 18px ;
+	margin-top: 5px;
+	color: rgb(93,93,93) ;
+	line-height: 1.3 ;
+}
+
+/* *********************** about Body footer section ***************************** */
+.about  .aboutContainer .aboutBodyFooterContainer
+{
+	width: 85%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #00f ;*/
+	margin: 10px auto ;
+}
+.about  .aboutContainer .aboutBodyFooterContainer .aboutBodyFooterH4
+{
+	font-size: 40px ;
+	margin-top: 10px  ;
+	margin-bottom: 15px  ;
+	text-align: center ;
+	color: rgb(29,29,29);
+}
+.about  .aboutContainer .aboutBodyFooterContainer .aboutBodyFooterPara1  ,
+.about  .aboutContainer .aboutBodyFooterContainer .aboutBodyFooterPara2
+{
+	font-size: 18px ;
+	margin-top: 15px;
+	color: rgb(93,93,93) ;
+	line-height: 1.5 ;
+}
+/* ################################## Responsive ################################## */
+@media (min-width:0px) and (max-width:609px)
+{
+	.about  .aboutContainer .aboutBodyContainer  .aboutleftPart     ,
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart	
+	{
+		width: 90% ;
+		margin-left: 5% ;
+		margin-right: 5% ;
+		clear: both ;
+	}
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartH3
+	{
+		font-size: 40px ;
+		text-align: center ;
+	}
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara1  , 
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara2  ,
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara3	, 
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara4	,
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara5
+	{
+		font-size: 13px ;
+	}
+	
+	.about  .aboutContainer .aboutBodyFooterContainer .aboutBodyFooterH4
+	{
+		font-size: 20px ;
+	}
+
+	/* ------------------ row 6 : <p> </p> ---------------------- */
+	.about  .aboutContainer .aboutBodyFooterContainer .aboutBodyFooterPara1  ,
+	.about  .aboutContainer .aboutBodyFooterContainer .aboutBodyFooterPara2
+	{
+		font-size: 14px ;
+	}
+}
+@media (min-width:610px) and (max-width:950px)
+{
+	.about  .aboutContainer .aboutBodyContainer  .aboutleftPart   
+	{
+		float: left;
+		width: 28% ;
+		margin-right: 2% ;
+		margin-top: 0 ;
+	}
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart	
+	{
+		float: right;
+		width: 68% ;
+		margin-left: 2% ;
+	}	
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartH3
+	{
+		font-size: 38px ;
+	}
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara1  , 
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara2  ,
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara3	, 
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara4	,
+	.about  .aboutContainer .aboutBodyContainer  .aboutRightPart  .aboutRightPartPara5
+	{
+		font-size: 14px ;
+	}
+}
+/* ********************************************** footer section ****************************************** */
+.footer 
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0; */
+	background-color: rgb(40,60,106) ;
+}
+.footer  .footerContainer
+{
+	width: 80% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0; */
+	margin: 0px auto ;
+	margin-top: 30px ;
+	text-align: center ;
+}
+/* ------------------------------------------ row 1 ---------------------------------------- */
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------------------------------ row 5 ---------------------------------------- */
+/* ------------------------------------------ row 6 ---------------------------------------- */
+/* ------------------------------------------ row 7 ---------------------------------------- */
+.footer  .footerContainer  .footerRow1 ,
+.footer  .footerContainer  .footerRow2 ,
+.footer  .footerContainer  .footerRow3 ,
+.footer  .footerContainer  .footerRow4 , 
+.footer  .footerContainer  .footerRow5 ,
+.footer  .footerContainer  .footerRow6 ,
+.footer  .footerContainer  .footerRow7
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f; */
+	
+}
+/* ------------------- row 1 : left part : image ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerImgClass
+{
+	width: 55px  ;
+	height: 55px ;
+	margin-bottom: -12px ;
+	margin-right: 15px ;
+}
+/* ------------------- row 1 : right part : h4 <a></a> ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerH4  a
+{
+	font-size: 40px ;
+	color: #fff ;
+	text-decoration: none ;
+	text-transform: capitalize ;
+}
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------ row 2 : <ul></ul> ---------------------- */
+/* ------------------ row 3 : <ul></ul> ---------------------- */
+/* ------------------ row 4 : <ul></ul> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow3Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow4Ul
+{
+	list-style: none ;
+	margin-top: 30px ;
+	margin-bottom: 0 ;
+}
+/* ------------------ row 2 : <li></li> ---------------------- */
+/* ------------------ row 3 : <li></li> ---------------------- */
+/* ------------------ row 4 : <li></li> ---------------------- */
+/* ------------------ row 7 : <li></li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  
+{
+	display: inline-block ;
+	margin-left: 15px ;
+	margin-right: 15px ;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* ------------------ row 2 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 3 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 7 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  a  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  a  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  a
+{
+	color: #fff ;	
+	text-decoration: none ;
+	font-size: 16px ;
+}
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a
+{
+	font-size: 25px;
+	transition: 0.5s ease ;
+}
+/* ---------------- row 4 : <li> <a></a> </li> : social Media[ facebook , twitter, youtube , instagram]:hover ------------------ */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a:hover
+{
+	color: #D1335B ;
+}
+/* ------------------ row 6 : <p> </p> ---------------------- */
+.footer  .footerContainer  .footerRow6  .footerCopyRightPara    
+{
+	color: #fff ;
+	font-size: 18px ;
+}
+/* ////////////////////////////////// Go Up button //////////////////////////////////  */
+.goUpBtn
+{
+	position: fixed;
+	/*  عشان يظهر فوق اي عنصر حيث في الشاشات الصغيرة هيكون ظاهر في اي عنصر يمر به */
+	z-index: 999 ;
+	bottom: 10px ;
+	right: 5px ;
+	padding: 15px ;
+/*	border: 2px solid #f00;*/
+	background-color: #555 ;
+	color: #fff;
+	border-radius: 50%; 
+	border: 0 ;
+	outline: 0 ;
+	cursor: pointer ;
+	/* 	 هيتم اخفاء الزرار وهيتم اظهاره لما انزل مسافة 400 بيكسل بحيث لما اضغط علي هذا الزرار يطلعني لبداية الصفحة */
+	display: none ;
+}
+
+.goUpBtn  .fa.fa-fighter-jet
+{
+    transform: rotate(-90deg) ;  
+	font-size: 25px ; 
+	color: gold ;
+}
+

@@ -1,0 +1,1003 @@
+/* ########################
+        Global style
+    ########################
+*/
+*
+{
+	box-sizing: border-box ;
+	font-family: sans-serif ;
+}
+/* ------------- smooth يطلع للاعلي بشكل  goUp button عشان لما اضغط علي ال ------------- */
+html , body 
+{
+    /*  smooth بشكل  section عشان لما اضغط علي اللينك يتم الانتقال لل */
+	scroll-behavior:smooth ;
+}
+body
+{
+	margin: 0 ;
+    padding: 0 ;
+	height: 2000px ;
+}
+/*  ################################################################################################
+										navbar section  style
+    ################################################################################################
+*/
+.navbar
+{
+	position: fixed;
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;*/
+	z-index: 999 ;
+}
+.navbar .navbarContainer
+{
+	width: 85% ;
+	margin: 0px auto ;
+	height: auto;
+	overflow: hidden ;
+/*	border: 2px solid #0f0 ;*/
+	
+}
+/* ************** logo part ******************** */
+.navbar .navbarContainer .logo
+{
+	width: 15% ; 
+	height: 66px;
+	float: left ;
+/*	border: 2px solid #ff0 ;	*/
+	text-transform: capitalize ;
+	font-weight: 500 ;
+}
+/* ************** logo part : <img> ******************** */
+.navbar .navbarContainer .logo  a  img
+{
+	float: left ;
+	width: 55px ;
+	height: 55px ;
+/*	border: 2px solid #f00 ; */
+	margin-top: 5px ;
+	border-radius: 50% ;
+	background-color: #fff ;
+}
+/* ************** logo part : <span></span> ******************** */
+.navbar .navbarContainer .logo span
+{
+	float: left ;
+	font-size: 25px;
+	margin-top: 20px ;
+	margin-left: 5px ;
+	color: #fff ;
+}
+/* ************** links part ******************** */
+.navbar .navbarContainer  .navbarLinks
+{
+	width: 85% ; 
+	float: right ;
+	text-align: right ;
+/*	border: 2px solid #f0f ;	*/
+}
+/* ************** links part : <ul> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul
+{
+	list-style: none ;
+	margin-top: 22px ;
+}
+/* ************** links part : <ul> <li></li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li
+{
+	display: inline-block ;
+	margin-right: 10px ;
+}
+/* ************** links part : <ul> <li> <a></a> </li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li a
+{
+	text-decoration: none ;
+	font-size: 18px ;
+	text-transform: capitalize;
+	color: rgb(131,148,183) ;
+	transition: 0.5s ease ;
+}
+.navbar .navbarContainer  .navbarLinks  ul  li a.active
+{
+	color: rgb(223,227,236) ;
+}
+.navbar .navbarContainer  .navbarLinks  ul  li a:hover
+{
+	color: rgb(223,227,236) ;
+}
+/* ************** links part : <ul> <li> <img> </li> </ul> ******************** */
+.navbar .navbarContainer  .navbarLinks  ul  li  img
+{
+	width: 25px ;
+	height: 25px ;
+	margin-bottom: -6px;		
+}
+/* ----------------------- menubar icon  ----------------------------- */
+.navbar .navbarContainer input
+{
+	position: absolute ;
+	top: 5px ;
+	right: 5px ;
+	display: none ;
+}
+.navbar .navbarContainer  .menubarLabel
+{
+	position: absolute;
+	top:15px; 
+	right: 5px ;
+/*	border: 2px solid #ff0;*/
+	cursor: pointer;
+	/* from  "0px" to "970px" في الشاشات المحمول  */
+	display: none ;
+}
+.navbar .navbarContainer  .menubarLabel .menubarDiv1  ,
+.navbar .navbarContainer  .menubarLabel .menubarDiv2  ,
+.navbar .navbarContainer  .menubarLabel .menubarDiv3  
+{
+	margin: 6px;
+	width: 40px;
+	height: 6px;
+	padding: 1px;
+	background-color: #fff ;
+	/* smooth يحصل التحول بشكل x الي علامة ال menubar icon عشان لما يحصل تحويل لل */
+	transition: 0.4s ;
+}
+.navbar .navbarContainer input:checked ~  .menubarLabel .menubarDiv1  
+{
+	transform: rotate(-45deg) translate(-8px, 9px) ;
+}
+.navbar .navbarContainer input:checked ~  .menubarLabel .menubarDiv2 
+{
+	opacity: 0 ;
+}
+.navbar .navbarContainer input:checked ~  .menubarLabel .menubarDiv3  
+{
+	transform: rotate(45deg) translate(-8px, -9px) ;
+}
+.navbar .navbarContainer input:checked ~     .navbarLinks
+{
+	display: block ;
+}
+/* ################################################# Responsive ################################################# */
+@media(min-width:0px) and (max-width:736px)
+{
+	.navbar .navbarContainer  .menubarLabel
+	{
+		display: block ;
+	}
+	/* ************** logo part ******************** */
+	.navbar .navbarContainer .logo
+	{
+		width: 100% ; 
+	}
+	/* ************** links part ******************** */
+	.navbar .navbarContainer  .navbarLinks
+	{
+		width: 100% ; 
+		clear: both ;
+		margin: 10px auto;
+		text-align: center ;
+/*		border: 2px solid #f0f ;*/
+		display: none ;
+	}
+	/* ************** links part ******************** */
+	.navbar .navbarContainer  .navbarLinks ul li
+	{
+		display: block ;
+		margin: 25px ;
+	}
+
+}
+
+/*	################################################################################################
+ 												header section
+	################################################################################################
+ */
+.coverHeader
+{
+	position: relative;
+	top: 0 ;
+	left: 0;
+	width: 100%;
+	height:auto;
+	z-index: 111 ;
+	overflow: hidden ;
+	text-align: center;
+/*	border: 2px solid #0f0; */
+	background-image: url("images/bg-layer.svg");
+	background-color: #264380 ;
+	background-repeat: no-repeat ;
+	/*  هذا هو المكان بتاع الخلفية يعني المكان التي تتواجد فيه الخلفية	*/
+	background-position:top right ;
+	background-size: cover ;
+}
+.coverHeader .coverHeaderContainer
+{
+	display: block ;
+	width: 80% ;
+	margin: 10px auto ;
+	height: auto;
+	overflow: hidden ;
+/*	border: 2px solid #0ff ; */
+	padding-top: 100px ;
+	padding-bottom: 100px ;
+}
+.coverHeader .coverHeaderContainer  .middle .imageHeaderContainer
+{
+/*	border: 2px solid #f0f ; */
+	display: block ;
+	padding-top:  100px ;
+}
+.coverHeader .coverHeaderContainer  .middle .imageHeaderContainer  img
+{
+	animation:  imageHeader  5s  infinite ;	
+}
+@keyframes imageHeader
+{
+	0%
+	{
+		transform: translateX(0px);
+	}
+	50%
+	{
+		transform: translateX(-90px);
+	}
+	100%
+	{
+		transform: translateX(0px);
+	}
+}
+.coverHeader .coverHeaderContainer  .middle  h2
+{
+	color: #fff ;
+	font-size: 70px ;
+	margin: 0 ;
+	letter-spacing: 7px ;
+	text-transform: capitalize ;
+	animation: moveH2OfHeader  5s infinite linear ;
+}
+@keyframes moveH2OfHeader
+{
+	0%
+	{
+		letter-spacing: 5px ;
+	}
+	50%
+	{
+		letter-spacing: 15px ;
+	}
+	100%
+	{
+		letter-spacing: 5px ;
+	}
+}
+.coverHeader .coverHeaderContainer  .middle .headerTopPara
+{
+	font-size: 25px ;
+	margin-bottom: 5px ;
+	text-transform: capitalize ;
+	color: #fff ;
+}
+
+.coverHeader .coverHeaderContainer  .middle   .appStoreClass
+{
+	display: block ;
+	margin: 50px auto ;
+	width: 300px ;
+	height: 100px ;
+	padding: 10px ;
+	border: 0 ;
+	outline: 0 ;
+	background-color: #1e3054 ;
+	transition:  0.5s ease-in-out ;
+	margin-bottom: 50px;
+	animation: appStoreAnimate  3s  infinite ;
+ }
+
+@keyframes appStoreAnimate
+{
+	0%
+	{
+		border-radius: 0px ;	
+	}
+	50%
+	{
+		border-radius: 50px ;
+	}
+	100%
+	{
+		border-radius: 0px ;	
+	}
+}
+.coverHeader .coverHeaderContainer  .middle   .appStoreClass img
+{
+	width: 100% ;
+	height: 100% ;	
+}
+.coverHeader .coverHeaderContainer  .middle   .appStoreClass:hover
+{
+	background-color: #ff635d ;
+}
+.coverHeader .coverHeaderContainer .headerPara
+{
+	font-size: 23px; 
+	font-style: italic ;
+	color: #fff ;
+	text-transform: capitalize ;
+	line-height: 1.2 ;
+}
+
+/* **************** waves section  : first wave ************ */
+.wave
+{
+	position: absolute ;
+	left: 0 ;
+	width: 100% ;
+	height: 140px ;
+	bottom: -32px ;
+	overflow: hidden ;
+/*	border: 2px solid #00f ;*/
+	background-image: url("images/bg-wave.png");
+	/* الصورة هتعطي العنصر اللي هيه موجودة فيه  */
+	background-size: cover ;
+	animation:  waveani  100s infinite ;
+	background-repeat: repeat-x ;
+
+}
+
+/* **************** waves section  : second wave ************ */
+.wave::before
+{
+	content:" ";
+	opacity: 0.5 ;
+	position: absolute ;
+	left: 0 ;
+	bottom: -32px ;
+	width: 100% ;
+	height: 200px ;
+/*	border: 2px solid #0ff ;*/
+	background-image: url("images/bg-wave.png");
+	/* الصورة هتعطي العنصر اللي هيه موجودة فيه  */
+	background-size: cover ;
+	animation:  waveaniRev  100s infinite ;
+}
+/* --------------- wave animation هحرك الامواج علي المحور الافقي -------------------- */
+@keyframes waveani
+{
+	/*	المرحلة الابتدائية للحركة */
+	0%
+	{
+		/* بمقدار 1000 بيكسل x هيحرك الخلفية بتاع الموجة علي محور */
+		background-position: 10000px ;	
+	}
+	/*	المرحلة المنتصفة للحركة */
+	50%
+	{
+		/* بمقدار 1000 بيكسل x هيحرك الخلفية بتاع الموجة علي محور */
+		background-position:500px ;			
+	}
+	/*	المرحلة الاخيرة للحركة */
+	100%
+	{
+		/* بمقدار 1000 بيكسل x هيحرك الخلفية بتاع الموجة علي محور */
+		background-position: 10000px ;	
+
+	}
+}
+/* --------------- wave animation هحرك الامواج علي المحور الافقي -------------------- */
+@keyframes waveaniRev
+{
+	/*	المرحلة الابتدائية للحركة */
+	0%
+	{
+		/* بمقدار 1000 بيكسل x هيحرك الخلفية بتاع الموجة علي محور */
+		background-position: -10000px ;	
+	}
+	/*	المرحلة المنتصفة للحركة */
+	50%
+	{
+		/* بمقدار 1000 بيكسل x هيحرك الخلفية بتاع الموجة علي محور */
+		background-position: -500px ;			
+	}
+	/*	المرحلة الاخيرة للحركة */
+	100%
+	{
+		/* بمقدار 1000 بيكسل x هيحرك الخلفية بتاع الموجة علي محور */
+		background-position: -10000px ;	
+
+	}
+}
+/* ################################################# Responsive ################################################# */
+@media(min-width:0px) and (max-width:736px)
+{
+	.coverHeader .coverHeaderContainer  .middle .imageHeaderContainer 
+	{
+		width: 100% ;
+		height: auto;
+		overflow: hidden; 
+		margin: 20px auto ;
+	}
+	
+	.coverHeader .coverHeaderContainer  .middle .imageHeaderContainer img
+	{
+		width: 60% ;
+	}
+	.coverHeader .coverHeaderContainer  .middle .headerPara
+	{
+		font-size: 20px ;
+	}
+
+	.coverHeader .coverHeaderContainer  .middle   .appStoreClass
+	{
+		width: 200px ;	
+	}
+	.coverHeader .coverHeaderContainer     .headerPara
+	{
+		font-size: 16px; 
+		margin-top: 0px ;
+		margin-bottom: 5px ;
+		line-height: 1.5 ;
+	}
+	/* **************** waves section  : first && second wave ************ */
+	.wave ,
+	.wave::before
+	{
+		bottom: -38px ;
+	}
+}
+/* *************************************** features section ************************************ */
+.feature
+{
+	width: 100%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f ;*/
+	background-color: #264380 ;
+}
+.feature  .featureContainer
+{
+	width: 90%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0 ;*/
+	margin: 30px auto ;
+}
+.feature  .featureContainer  .featureH2
+{
+	font-size: 50px ;
+	text-align: center ;
+	color: #fff ;
+	font-weight: normal ;
+}
+.feature  .featureContainer  p
+{
+	font-size: 16px ;
+	text-align: center ;
+	color: #fff ;
+	font-weight: normal ;
+	color: rgba(255, 255, 255, 0.75);
+}
+.feature  .featureContainer  .box
+{
+	width: 31.3333% ;
+	margin: 1% ;
+	float: left ;
+/*	border: 2px solid #f00;*/
+	margin-top: 50px ;
+	text-align: center ;
+}
+.feature  .featureContainer  .box  img
+{
+	width: 100% ;
+	height: 350px ;
+}
+.feature  .featureContainer  .box  .featurBoxH4
+{
+	color: #fff;
+	font-size: 25px ;
+	font-weight: normal ;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+.feature  .featureContainer  .box  .featurBoxPara
+{
+	padding-left: 25px ;
+	padding-right: 25px ;
+	color: rgba(255, 255, 255, 0.75);
+	font-weight: normal ;
+	font-size: 16px ;
+	line-height: 1.5 ;
+}
+/* ################################################# Responsive ################################################# */
+@media (min-width:0px) and (max-width:610px)
+{
+	.feature  .featureContainer  .featureH2
+	{
+		font-size: 40px ;
+	}
+	.feature  .featureContainer  p
+	{
+		font-size: 15px ;
+	}
+	.feature  .featureContainer  .box:nth-of-type(1) ,
+	.feature  .featureContainer  .box:nth-of-type(2) ,
+	.feature  .featureContainer  .box:nth-of-type(3)
+	{
+		width: 90% ;
+		margin-left: 5% ;
+		margin-right: 5% ;
+		margin-top: 5% ;
+		margin-bottom: 1% ;
+	}
+	.feature  .featureContainer  .box:nth-of-type(1) img ,
+	.feature  .featureContainer  .box:nth-of-type(2) img ,
+	.feature  .featureContainer  .box:nth-of-type(3) img
+	{
+		height: 200px;
+	}
+}
+@media (min-width:611px) and (max-width:951px)
+{
+	.feature  .featureContainer  .box:nth-of-type(1) ,
+	.feature  .featureContainer  .box:nth-of-type(2)
+	{
+		width: 48% ;
+		margin-left: 1% ;
+		margin-right: 1% ;
+		margin-top: 2% ;
+		margin-bottom: 1% ;
+		display: inline-block ;
+	}
+	.feature  .featureContainer  .box:nth-of-type(3)
+	{
+		width: 50% ;
+		margin-left: 25% ;
+		margin-right: 25% ;
+		margin-top: 2% ;
+		margin-bottom: 1% ;	
+	}
+	.feature  .featureContainer  .box:nth-of-type(1) img ,
+	.feature  .featureContainer  .box:nth-of-type(2) img ,
+	.feature  .featureContainer  .box:nth-of-type(3) img
+	{
+		height: 250px;
+	}
+}
+/* *************************************** features section ************************************ */
+.statistics
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0ff;*/
+	background-color: rgb(241, 242, 247) ;
+}
+.statistics  .statisticsContainer
+{
+	width: 90% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f;*/
+	margin: 20px  auto ;
+}
+.statistics  .statisticsContainer .statisticsH2
+{
+	text-align: center ;
+	font-size: 35px ;
+}
+.statistics  .statisticsContainer  .statisticsBox
+{
+	float: left ;
+	width: 23%;
+	margin: 1% ;
+	text-align: center ;
+	background-color: #fff ;
+	padding-top: 30px;
+}
+.statistics  .statisticsContainer  .statisticsBox  img
+{
+	width:80px ;
+	height: 80px ;
+	max-width: 100%;
+/*	border: 2px solid #0ff;*/
+}
+.statistics  .statisticsContainer  .statisticsBox .statisticsPara1
+{
+	font-size: 30px ;	
+	margin-top: 10px ; 
+	margin-bottom: 10px ; 
+}
+.statistics  .statisticsContainer  .statisticsBox .statisticsPara2
+{
+	font-size: 30px ;
+	margin-top: 20px ; 
+	margin-bottom: 5px ;
+	padding-bottom: 10px;
+	color: #555 ;
+}
+/* ################################################# Responsive ################################################# */
+@media (min-width:0px) and (max-width:610px)
+{
+	.statistics  .statisticsContainer .statisticsH2
+	{
+		font-size: 24px ;
+	}
+	.statistics  .statisticsContainer  .statisticsBox
+	{
+		width: 90%;
+		margin: 5% ;
+		float: none;
+	}
+	.statistics  .statisticsContainer  .statisticsBox .statisticsPara1
+	{
+		font-size: 25px ;	
+	}
+	.statistics  .statisticsContainer  .statisticsBox .statisticsPara2
+	{
+		font-size: 28px ;
+	}
+	.statistics  .statisticsContainer  .statisticsBox  img
+	{
+		width:120px ;
+		height: 120px ;
+	}
+}
+@media (min-width:611px) and (max-width:951px)
+{
+	.statistics  .statisticsContainer  .statisticsBox
+	{
+		float: left ;
+		width: 48%;
+		margin: 1% ;
+	}	
+	.statistics  .statisticsContainer  .statisticsBox .statisticsPara1
+	{
+		font-size: 25px ;	
+	}
+	.statistics  .statisticsContainer  .statisticsBox .statisticsPara2
+	{
+		font-size: 27px ;
+	}
+}
+
+/* *************************************** student opinion section ************************************ */
+.studentOpinion
+{
+	width: 100%;
+	height: auto ;
+	overflow: hidden ; 
+/*	border: 2px solid #f0f ;*/
+	background-color: #fff ;
+}
+.studentOpinion  .studentOpinionContainer
+{
+	width: 90%;
+	height: auto ;
+	overflow: hidden ; 
+/*	border: 2px solid #ff0 ;*/
+	margin: 50px auto ;
+}
+.studentOpinion  .studentOpinionContainer  .studentOpinionH2
+{
+	font-size: 40px ;
+	text-align: center ;
+	color: #264380 ;
+	font-weight: normal ;
+	margin-bottom: 10px ;
+}
+.studentOpinion  .studentOpinionContainer  .studentOpinionPara
+{
+	font-size: 25px ;
+	text-align: center ;
+	font-weight: normal ;
+	color: #000 ;
+}
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl
+{
+	width: 300% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;*/
+	margin: 0 ;
+	padding: 0 ;
+	transition: 1s ease-in-out ;
+}
+/* -------------------------- blocks -------------------------- */
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl   .opinionLiBlock
+{
+	width:31.333% ;
+	margin: 1% ;
+	float: left ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f ;*/
+	text-align: center ;
+}
+
+/* -------------------------- box -------------------------- */
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl .opinionLiBlock  .opinionBox
+{
+	position: relative ;
+	width:25% ;
+	margin: 1% ;
+	display: inline-block ;
+	height: 373px  ;
+	overflow: hidden ;
+	padding-top: 40px ;
+	padding-bottom: 20px ;
+	padding-left: 20px ;
+	padding-right: 20px ;
+	border-radius: 5px;
+	box-shadow:  2px  4px 5px #555 ,
+				 2px -4px 5px #555 , 
+				-2px  4px 5px #555 , 
+				-2px -4px 5px #555 ;
+}
+/* -------------------------- stars of each box : <i></i> -------------------------- */
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl .opinionLiBlock  .opinionBox  .opinionStars  i
+{
+	font-size: 30px ;
+	color:deeppink;
+}
+/* -------------------------- h4 of each box : <h4></h4> -------------------------- */
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl .opinionLiBlock  .opinionBox  .opinionH4
+{
+	font-size: 20px ;
+	color: #000 ;
+}
+/* ---------------------------------- paragraph  of opinion -------------------------- */
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl .opinionLiBlock  .opinionBox  .opinionPara
+{
+	font-size: 18px ;
+	margin-top: 10px ;
+	color: #888 ;
+}
+/* ---------------------------------- quote  of opinion -------------------------- */
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl .opinionLiBlock  .opinionBox  .quoteOpinionIcon
+{
+	position: absolute ;
+	bottom: -50px ;
+	left: 0 ;
+	width: 100% ;
+/*	border: 2px solid #0ff; */
+	height: 80px ;
+	overflow: hidden ;
+}
+.studentOpinion  .studentOpinionContainer  .studentOpinionUl .opinionLiBlock  .opinionBox  .quoteOpinionIcon  i
+{
+	font-size: 30px;
+	color: deeppink ;
+}
+.bulletsInputContainer
+{
+/*	border: 2px solid #0f0 ;*/
+	text-align: center ;	
+}
+.studentOpinion  .studentOpinionContainer .bulletsLabelContainer
+{
+/*	border: 2px solid #00f ;*/
+	text-align: center ;
+}
+.studentOpinion  .studentOpinionContainer   .opinionBullet
+{
+	display: inline-block ;
+	width: 15px ; 
+	height: 15px ;
+	border-radius: 50% ;
+	padding: 5px ;
+/*	border:2px solid #000 ;*/
+	margin: 5px  ;
+	cursor: pointer ;
+	background-color: #888 ;
+	transition: 1s ease-in-out ;
+}
+.studentOpinion  .studentOpinionContainer   .opinionBullet.active
+{
+	background-color: deeppink ;
+}
+
+/* ################################################# Responsive ################################################# */
+@media (min-width:0px) and (max-width:609px)
+{
+	/* -------------------------- blocks -------------------------- */
+	.studentOpinion  .studentOpinionContainer  .studentOpinionUl   .opinionLiBlock .opinionBox
+	{
+		width: 90% ;
+		margin: 5% ;
+		float: none ;
+	}
+}
+@media (min-width:610px) and (max-width:1000px)
+{
+	/* -------------------------- blocks -------------------------- */
+	.studentOpinion  .studentOpinionContainer  .studentOpinionUl   .opinionLiBlock .opinionBox:nth-of-type(1) ,
+	.studentOpinion  .studentOpinionContainer  .studentOpinionUl   .opinionLiBlock .opinionBox:nth-of-type(2) 
+	{
+		width: 46% ;
+		margin: 2% ;
+		float: left ;
+	}
+	.studentOpinion  .studentOpinionContainer  .studentOpinionUl   .opinionLiBlock .opinionBox:nth-of-type(3)
+	{
+		width: 46% ;
+		margin-left: 27% ;
+		margin-right: 27% ;
+		margin-top: 10px; 
+		clear: both ;
+	}
+}
+/* ********************************************** footer section ****************************************** */
+.footer 
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0; */
+	background-color: rgb(40,60,106) ;
+}
+.footer  .footerContainer
+{
+	width: 80% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0; */
+	margin: 0px auto ;
+	margin-top: 30px ;
+	text-align: center ;
+}
+/* ------------------------------------------ row 1 ---------------------------------------- */
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------------------------------ row 5 ---------------------------------------- */
+/* ------------------------------------------ row 6 ---------------------------------------- */
+/* ------------------------------------------ row 7 ---------------------------------------- */
+.footer  .footerContainer  .footerRow1 ,
+.footer  .footerContainer  .footerRow2 ,
+.footer  .footerContainer  .footerRow3 ,
+.footer  .footerContainer  .footerRow4 , 
+.footer  .footerContainer  .footerRow5 ,
+.footer  .footerContainer  .footerRow6 ,
+.footer  .footerContainer  .footerRow7
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f; */
+	
+}
+/* ------------------- row 1 : left part : image ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerImgClass
+{
+	width: 55px  ;
+	height: 55px ;
+	margin-bottom: -12px ;
+	margin-right: 15px ;
+}
+/* ------------------- row 1 : right part : h4 <a></a> ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerH4  a
+{
+	font-size: 40px ;
+	color: #fff ;
+	text-decoration: none ;
+	text-transform: capitalize ;
+}
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------ row 2 : <ul></ul> ---------------------- */
+/* ------------------ row 3 : <ul></ul> ---------------------- */
+/* ------------------ row 4 : <ul></ul> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow3Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow4Ul
+{
+	list-style: none ;
+	margin-top: 30px ;
+	margin-bottom: 0 ;
+}
+/* ------------------ row 2 : <li></li> ---------------------- */
+/* ------------------ row 3 : <li></li> ---------------------- */
+/* ------------------ row 4 : <li></li> ---------------------- */
+/* ------------------ row 7 : <li></li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  
+{
+	display: inline-block ;
+	margin-left: 15px ;
+	margin-right: 15px ;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* ------------------ row 2 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 3 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 7 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  a  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  a  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  a
+{
+	color: #fff ;	
+	text-decoration: none ;
+	font-size: 16px ;
+}
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a
+{
+	font-size: 25px;
+	transition: 0.5s ease ;
+}
+/* ---------------- row 4 : <li> <a></a> </li> : social Media[ facebook , twitter, youtube , instagram]:hover ------------------ */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a:hover
+{
+	color: #D1335B ;
+}
+/* ------------------ row 5 : <button></button> ---------------------- */
+.footer  .footerContainer  .footerRow5  .footerDownloadBtn    
+{
+	width: 220px;
+	height: 70px ;
+	padding: 30px; 
+	margin-left: 50px ;
+	background-image: url("images/app-store.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: rgb(30,48,84) ;
+	border: 0 ;
+	outline: 0 ;
+	cursor: pointer ;
+	border-radius: 50px; 
+	transition: 0.8s ease ;
+	margin-bottom: 15px ;
+}
+/* ------------------ row 5 : <button></button> ---------------------- */
+.footer  .footerContainer  .footerRow5  .footerDownloadBtn:hover  
+{
+	background-color: #ff635d ;
+}
+/* ------------------ row 6 : <p> </p> ---------------------- */
+.footer  .footerContainer  .footerRow6  .footerCopyRightPara    
+{
+	color: #fff ;
+	font-size: 18px ;
+}
+/* ------------------ row 7 : <li> <a> <img> </a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  a  img
+{
+	width: 40px;
+	height: 40px ;
+}
+	
+/* ////////////////////////////////// Go Up button //////////////////////////////////  */
+.goUpBtn
+{
+	position: fixed;
+	/*  عشان يظهر فوق اي عنصر حيث في الشاشات الصغيرة هيكون ظاهر في اي عنصر يمر به */
+	z-index: 999 ;
+	bottom: 10px ;
+	right: 5px ;
+	padding: 15px ;
+/*	border: 2px solid #f00;*/
+	background-color: #555 ;
+	color: #fff;
+	border-radius: 50%; 
+	border: 0 ;
+	outline: 0 ;
+	cursor: pointer ;
+	/* 	 هيتم اخفاء الزرار وهيتم اظهاره لما انزل مسافة 400 بيكسل بحيث لما اضغط علي هذا الزرار يطلعني لبداية الصفحة */
+	display: none ;
+}
+
+.goUpBtn  .fa.fa-fighter-jet
+{
+    transform: rotate(-90deg) ;  
+	font-size: 25px ; 
+	color: gold ;
+}

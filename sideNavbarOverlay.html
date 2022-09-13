@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+
+			body
+			{
+				display: block ;
+				height: 1000px;
+				margin: 0 ;
+				padding: 0 ;
+				background-color: #0f0 ;
+			}
+			.bodyOverlay
+			{
+				position: absolute ;
+				top: 0 ;
+				left: 0 ;
+				height: 1000px;
+				width: 100% ;
+				z-index: 888 ;
+				background-color: rgba(0,0,0,0.6);
+				display: none ;
+				margin: 0 ;
+				padding: 0 ;
+			}	
+			/*  /////////////////////// navbar 2 : menubar <li> /////////////////////// */
+			.navbar2  .navbar2Container  .logo2		ul	 .navbar2MenubarLi
+			{
+				position: absolute;
+				top: 14px ;
+				display: inline-block ;
+				width: 30px ;
+				height: 30px;
+			/*	border: 2px solid #0ff ; */
+				background-color: rgb(242,242,242) ;
+				color: #000 ;
+				padding-top: 12px ; 
+				padding-left: 12px ; 
+				border-radius: 50% ;
+				cursor: pointer ;
+			}
+
+			/* ------------------------ navbar 2 : checkbox : <input> --------------------------- */
+			.navbar2  .navbar2Container  .logo2		ul	.navbar2MenubarLi  #checkbox2Id
+			{
+				position: absolute ;
+				top: 5px ;
+				right: 5px ;
+				display: none ;
+			}
+			/*  /////////////////////// navbar 2 : menubar label : 3 <div> /////////////////////// */
+			.navbar2  .navbar2Container  .logo2		ul	.navbar2MenubarLi   .menubar2Label	div
+			{
+			/*	border: 2px solid #0f0 ; */
+				display: block ;
+				width: 15px ;
+				height:3px ;
+				margin-bottom: 3px ;
+				background-color: #000 ;
+				cursor: pointer ;
+			}
+
+			/* ************************************ sideNavbar 2 : will be displayed in small screen **************************** */
+			.sideNavbar2Links
+			{
+				position: fixed ;
+				right: 0 ;
+				top: 0 ;
+				height: 100% ;
+				width: 0 ;
+				/* -----------------  navbar 1 فوق كل العناصر وفوق ال sideNavbar هيظهر ال -----------------  */
+				z-index: 1000 ;
+			/*	border: 2px solid #f00 ; */
+				direction: rtl ;
+			/*	margin-top: 65px ;*/
+				background-color: #fff ;
+				overflow-x: hidden;
+				padding-top: 60px;
+				transition: 0.5s ease-in-out ;
+			}
+			.sideNavbar2Links	ul
+			{
+				list-style: none ;
+			}
+			.sideNavbar2Links	ul	li
+			{
+				margin-bottom: 20px ;
+			}
+			.sideNavbar2Links	ul	li	a
+			{
+				text-decoration: none ;
+				color: #000 ;
+				text-transform: capitalize ;
+				font-size: 20px;
+				transition: 0.3s ease-in-out ;
+			}
+			/*  ****************** close icon ******************  */
+			.sideNavbar2Links	ul	li	a.closeIcon
+			{
+				position: absolute;
+				top: 10px ;
+				left: 20px ;
+				font-size: 45px; 
+			}
+			.sideNavbar2Links	ul	li  a:hover
+			{
+				color: rgb( 255 , 0 , 255 ); 
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="bodyOverlay" id="bodyOverlayId"></div>
+		<!-- *************************************************** navbar 2 section ***************************************** -->
+		<div class="navbar2" id="navbar2Id">
+			<div class="navbar2Container">
+				<!-- ************************************** sideNavbar 2 ************************************ -->
+				<div class="sideNavbar2Links" id="sideNavbar2LinksId">
+					<ul>
+						<!-- ****************** close icon ****************** -->
+						<li><a href="#" class="closeIcon" onclick="closeNav()">&times;</a></li>
+						<li><a href="#">general</a></li>
+						<li><a href="#">chinese</a></li>
+						<li><a href="#">english</a></li>
+						<li><a href="#">french</a></li>
+						<li><a href="#">german</a></li>
+						<li><a href="#">russian</a></li>
+						<li><a href="#">spanish</a></li>
+						<li><a href="#">turkish</a></li>
+					</ul>
+				</div>
+				<!-- **************************** navbar 2 : logo part ******************************-->
+				<div class="logo2">
+					<ul>
+						<li class="navbar2MenubarLi">
+							<!-- menubar icon -->
+							<input type="checkbox" id="checkbox2Id">
+							<label class="menubar2Label" for="checkboxId" id="menubarLabelId" onclick="openNav()">
+								<div class="menubarDiv1" id="menubarId"></div>
+								<div class="menubarDiv2" id="menubarId"></div>
+								<div class="menubarDiv3" id="menubarId"></div>
+							</label>
+						</li>
+					</ul>				
+				</div>
+			</div>
+		</div>
+
+		<script>
+			
+			var 
+				bodyOverlayEl = document.getElementById("bodyOverlayId") ,
+				navbar2El = document.getElementById("navbar2Id") ,
+				sideNavbar2El = document.getElementById("sideNavbar2LinksId") ;
+			
+			function openNav()
+			{
+				sideNavbar2El.style.width="250px";	
+				bodyOverlayEl.style.display="block";
+
+			}
+			function closeNav()
+			{
+				sideNavbar2El.style.width="0px";	
+				bodyOverlayEl.style.display="none";
+			}
+
+
+		</script>
+	</body>
+</html>

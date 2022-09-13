@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blog</title>
+		<!-- هذا وصف للموقع حيث مجموعة من الكلمات تصف الموقع -->
+		<meta name="description" 
+			  content="Learn languages for free with Taleek. Learn English, French, Chinese, German, Spanish, Turkish, Russian and many 
+					   more. Download Taleek for iOS and Android and start learning today."
+		>
+		<!--  هذا مجموعة من المصلحات و الكلمات اللي موجودة في الموقع -->
+		<meta name="keywords" content="taleek, learn, English, French, Chinese, Spanish, German, Turkish, Russian, learn English, learnFrench, learn Chinese, learn Spanish, learn German, learn Turkish, learn Russian, Ibrahim Adel, طليق, تعلم, الانجليزية, انجليزي, الفرنسية, فرنسي, الصينية, صيني, الاسبانية, الأسبانية, أسباني, الألمانية, ألماني, التركية, تركي, الروسية, روسي, تعلم الانجليزية, تعلم الفرنسية, تعلم الصينية, تعلم الأسبانية, تعلم الألمانية, تعلم التركية, تعلم الروسية, تعلم اللغات"
+		>
+        <link rel="stylesheet" href="blog_style.css" />
+		<link rel="stylesheet" href="vendors/font-awesome.min.css">
+		<!-- بتاع الموقع هعمل الاتي tab عشان احط صورة علي ال -->
+	  	<link rel="icon" href="images/favicon.png" >
+    </head>
+	
+    <body>
+		<!-- ************************************************ body overlay layer ************************************************ -->
+		<div class="bodyOverlay" id="bodyOverlayId"></div>
+		
+		<!-- *************************************** navbar 1 section *********************************** -->
+		<div class="navbar" id="navbar1Id">
+			<div class="navbarContainer">
+				<!-- ************** logo part ********************-->
+				<div class="logo">
+					<span id="logoHeaderId"></span>
+				</div>
+				<!-- ************** links part ********************-->
+				<div class="navbarLinks">
+					<ul>
+						<li><a href="index.html">home</a></li>
+						<li><a href="discussion.html">discussion</a></li>
+						<li><a href="courses.html">courses</a></li>
+						<li><a href="blog.html" class="active">blog</a></li>
+						<li><a href="about.html">about</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- *************************************************** navbar 2 section ***************************************** -->
+		<div class="navbar2" id="navbar2Id">
+			<div class="navbar2Container">
+				<!-- ********************************* navbar 2 : links part ****************************** -->
+				<div class="navbar2Links">
+					<ul>
+						<li><a href="#"><img src="images/logo111.png"></a></li>
+						<li><a href="#">general</a></li>
+						<li><a href="#">chinese</a></li>
+						<li><a href="#">english</a></li>
+						<li><a href="#">french</a></li>
+						<li><a href="#">german</a></li>
+						<li><a href="#">russian</a></li>
+						<li><a href="#">spanish</a></li>
+						<li><a href="#">turkish</a></li>
+					</ul>
+				</div>
+				
+				<!-- ************************************** sideNavbar 2 ************************************ -->
+				<div class="sideNavbar2Links" id="sideNavbar2LinksId">
+					<ul>
+						<!-- ****************** close icon ****************** -->
+						<li><a href="#" class="closeIcon" onclick="closeNav()">&times;</a></li>
+						<li><a href="#">general</a></li>
+						<li><a href="#">chinese</a></li>
+						<li><a href="#">english</a></li>
+						<li><a href="#">french</a></li>
+						<li><a href="#">german</a></li>
+						<li><a href="#">russian</a></li>
+						<li><a href="#">spanish</a></li>
+						<li><a href="#">turkish</a></li>
+					</ul>
+				</div>
+				<!-- ************************************** search field  ************************************ -->
+				<div class="searchFieldBlock" id="searchFieldBlockId">
+					<span class="closeIcon" onclick="closeFunc()" id="closeIconId">&times;</span>
+					<input type="text" placeholder="search ...... " id="searchFieldId">
+					<div class="lineUnderSearchField" id="lineUnderSearchFieldId"></div>
+				</div>
+				<!-- **************************** navbar 2 : logo part ******************************-->
+				<div class="logo2">
+					<ul>
+						<li class="navbar2MenubarLi" id="menubarIconId" >
+							<!-- menubar icon -->
+							<input type="checkbox" id="checkbox2Id">
+							<label class="menubar2Label" for="checkboxId" onclick="openNav()">
+								<div class="menubarDiv1" id="menubarId"></div>
+								<div class="menubarDiv2" id="menubarId"></div>
+								<div class="menubarDiv3" id="menubarId"></div>
+							</label>
+						</li>
+						<!-- when clock on seach icon , it will apear search Field -->
+						<li class="navbar2Li" id="searchId"><a href="#"><i class="fa fa-search" onclick="openFunc()"></i></a></li>
+						<li class="navbar2Li" id="facebookId"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="navbar2Li" id="youtubeId"><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li class="navbar2Li" id="instagramId"><a href="#"><i class="fa fa-instagram"></i></a></li>
+						<li class="navbar2Li" id="twitterId"><a href="#"><i class="fa fa-twitter"></i></a></li>
+					</ul>				
+				</div>
+			</div>
+		</div>
+		<!-- *************************************** blog section *************************************** -->
+		<div class="blog" id="blogId">
+			<div class="blogContainer">
+				<!-- ///////////////////////////////////////////////// left column //////////////////////////////////////////// -->
+				<!-- ########################################## left part  1  ########################################## -->
+				<div class="blogLeftColPart">
+					<h2 class="blogLeftColPartH2">أحدث المواضيع</h2>
+					<!-- ********* carousel ********* -->
+					<div class="blogLeftColPartCarousel"id="blogLeftColPartCarouselId">
+						<ul>
+							<!-- /////////////////////// slide 1 /////////////////////// -->
+							<li>
+								<img src="images/blogsImg/GHBlog.jpg" class="carouselMainImg">
+								<!-- /////////// overlay layer /////////// -->
+								<div class="overlayImg">
+									<span class="carouselSpan">english</span>
+									<p class="carouselPara"> ولا ننطقها Gh لماذا نكتب</p>
+									<div class="accountAndDate">
+										<img src="images/Person_1.jpg" class="accountImg">
+										<span class="accountName">osama faried</span>
+										<!-- بي -->
+										<span class="accountDate" id="carouselDateId">2021 March 14 </span>
+										<span class="accountDateIcon"><i class="fa fa-clock-o"></i></span>
+									</div>
+								</div>
+								
+							</li>
+							<!-- /////////////////////// slide 2 /////////////////////// -->
+							<li>
+								<img src="images/blogsImg/arabicImg.jpg" class="carouselMainImg">
+								<!-- /////////// overlay layer /////////// -->
+								<div class="overlayImg">
+									<span class="carouselSpan">general</span>
+									<p class="carouselPara">الخطوات الاساسية لكتابة القصيدة</p>
+									<div class="accountAndDate">
+										<img src="images/person-1.jpg" class="accountImg">
+										<span class="accountName">Tamer Ramy</span>
+										<span class="accountDate" id="carouselDateId">2020 April 2 </span>
+										<span class="accountDateIcon"><i class="fa fa-clock-o"></i></span>
+									</div>
+								</div>
+							</li>
+							<!-- /////////////////////// slide 3 /////////////////////// -->
+							<li>
+								<img src="images/blogsImg/romanceBlog.png" class="carouselMainImg">
+								<!-- /////////// overlay layer /////////// -->
+								<div class="overlayImg">
+									<span class="carouselSpan">english</span>
+									<p class="carouselPara">اللغات الرومانسية</p>
+									<div class="accountAndDate">
+										<img src="images/Person_3.jpg" class="accountImg">
+										<span class="accountName">kariem zain</span>
+										<span class="accountDate" id="carouselDateId">2019 Dec 8 </span>
+										<span class="accountDateIcon"><i class="fa fa-clock-o"></i></span>
+									</div>
+								</div>
+							</li>
+							<!-- /////////////////////// slide 4 /////////////////////// -->
+							<li>
+								<img src="images/blogsImg/eyesBlog.jpg" class="carouselMainImg">
+								<!-- /////////// overlay layer /////////// -->
+								<div class="overlayImg">
+									<span class="carouselSpan">english</span>
+									<p class="carouselPara">how to keep your vision healthy</p>
+									<div class="accountAndDate">
+										<img src="images/person6.jpg" class="accountImg">
+										<span class="accountName">osama elzero</span>
+										<span class="accountDate" id="carouselDateId">2021 March 14 </span>
+										<span class="accountDateIcon"><i class="fa fa-clock-o"></i></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- ########################################## left part  2  ########################################## -->
+					<div class="blogLeftPart2">
+						<h2 class="blogLeftColPartH2">أقسام المدونة</h2>
+						<!-- ********* blog box 1 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">chinese</a> </div>
+							<div class="blogLeftPartBoxCircleNum">0</div>
+						</div>
+						<!-- ********* blog box 2 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">english</a> </div>
+							<div class="blogLeftPartBoxCircleNum">5</div>
+						</div>
+						<!-- ********* blog box 3 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">french</a> </div>
+							<div class="blogLeftPartBoxCircleNum">0</div>
+						</div>
+						<!-- ********* blog box 4 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">general</a> </div>
+							<div class="blogLeftPartBoxCircleNum">4</div>
+						</div>
+						<!-- ********* blog box 5 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">german</a> </div>
+							<div class="blogLeftPartBoxCircleNum">0</div>
+						</div>
+						<!-- ********* blog box 6 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">russian</a> </div>
+							<div class="blogLeftPartBoxCircleNum">0</div>
+						</div>
+						<!-- ********* blog box 7 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">spanish</a> </div>
+							<div class="blogLeftPartBoxCircleNum">2</div>
+						</div>
+						<!-- ********* blog box 8 ********* -->
+						<div class="blogLeftPartBox">
+							<div class="blogLeftPartBoxTitle"> <a href="#">turkish</a> </div>
+							<div class="blogLeftPartBoxCircleNum">0</div>
+						</div>
+					</div>
+					<!-- ########################################## left part  3  ########################################## -->
+					<div class="blogLeftPart3">
+						<h2 class="blogLeftColPartH2">روابط تهمك</h2>
+						<!-- ********* left part 3 : blog link 1 ********* -->	
+						<p class="blogLeftColPartPara"> <a href="#">تسجيل الدخول</a></p>
+						<!-- ********* left part 3 : blog link 1 ********* -->	
+						<p class="blogLeftColPartPara"> <a href="#">  خلاصات الادخالات Feed</a></p>
+						<!-- ********* left part 3 : blog link 1 ********* -->	
+						<p class="blogLeftColPartPara"> <a href="#">خلاصة التعليقات</a></p>
+						<!-- ********* left part 3 : blog link 1 ********* -->	
+						<p class="blogLeftColPartPara"> <a href="#">WordPress.org</a></p>
+					</div>
+				</div>
+<!-- ///////////////////////////////////////////////////////////// right column //////////////////////////////////////////////////////////////// -->				
+				<!-- ########################################## right part column ########################################## -->
+				<div class="blogRightColPart">
+					
+					<!-- /////////////////////// slide 1 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/GHBlog.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara"> لماذا نكتب Gh ولا ننطقها </p>
+							<div class="accountAndDateRightBox">
+								<img src="images/person-1.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">Fouad Diab</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">2021 March 14 </span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 2 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/romanceBlog.png">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">اللغات الرومانسية</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/Person_2.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">naguib</span>
+								<span class="accountDateRightBox">2021 March 14 </span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 3 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/N_img.jpg">
+							<span class="carouselSpan">spanish</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">هل تعرف قصة حرف ال N</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/Person_3.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">sayed</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">2021 March 14 </span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 4 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/Z_img.jpeg">
+							<span class="carouselSpan">spanish</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">لماذا لا ينطق حرف ال  Z في امريكا اللاتينية كما في اسبانيا ؟ </p>
+							<div class="accountAndDateRightBox">
+								<img src="images/person4.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">mohsan taha</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">1 مارس 2021</span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 5 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/arabicImg2-.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">الخطوات الاساسية لكتابة القصيدة</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/person5.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">Ramadan</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">2021 March 14 </span>
+							</div>
+						</div>
+					</div>					
+					<!-- /////////////////////// slide 1 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/eyesBlog.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">how to keep your vision healthy</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/person6.png" class="accountImgRightBox">
+								<span class="accountNameRightBox">osama elzero</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">2021 March 14 </span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 2 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/practice.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">the importance of practicing hobbies in our life</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/Person_1.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">osama elzero</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">4 مارس 2021 </span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 3 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/waterBlog.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">a drop of water is more precious than gold</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/person3.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">osama elzero</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">14 فبراير 2021  </span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 4 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/english-world.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">لماذا الكل يتكلم الانجليزية</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/person16.jpg" class="accountImgRightBox">
+								<span class="accountNameRightBox">osama elzero</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+								<span class="accountDateRightBox">6 فبراير 2021 </span>
+							</div>
+						</div>
+					</div>
+					<!-- /////////////////////// slide 5 /////////////////////// -->
+					<!-- //////////// box img //////////// -->
+					<div class="blogRightPartBox">
+						<div class="blogRightPartBoxMainImg">
+							<img src="images/blogsImg/safari.jpg">
+							<span class="carouselSpan">english</span>
+						</div>
+						<!-- //////////// box info //////////// -->
+						<div class="blogRightPartBoxInfo">
+							<p class="carouselPara">كلمات انجليزية من اصل عربي</p>
+							<div class="accountAndDateRightBox">
+								<img src="images/logo1.png" class="accountImgRightBox">
+								<span class="accountDateRightBox">23 يناير 2021 </span>
+								<span class="accountNameRightBox">osama elzero</span>
+								<span class="accountDateIconRightBox"><i class="fa fa-clock-o"></i></span>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<!-- **************************************************** footer section ********************************************** -->
+		<div class="footer">
+			<div class="footerContainer">
+				<div class="footerRow1">
+					<img src="images/logo1.png" class="footerImgClass">
+					<span class="footerH4"><a href="#">taleek</a></span>
+				</div>
+				<div class="footerRow2">
+					<ul class="footerRow2Ul">
+						<li class="footerHomeLink"><a href="index.html">Home</a></li>
+						<li class="footerDiscussionLink"><a href="discussion.html">Discussion</a></li>
+						<li class="footerCoursesLink"><a href="courses.html">Courses</a></li>
+						<li class="footerBlogLink"><a href="blog.html">Blog</a></li>
+						<li class="footerAboutLink"><a href="about.html">About</a></li>
+						<li class="footerContactLink"><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footerRow3">
+					<ul class="footerRow3Ul">
+						<li class="footerVisionLink"><a href="#">Vision</a></li>
+						<li class="footerMissionLink"><a href="#">Mission</a></li>
+						<li class="footerOurTeamLink"><a href="#">Our Team</a></li>
+						<li class="footerJobsLink"><a href="#">Jobs</a></li>
+						<li class="footerTermsLink"><a href="#">Terms & Conditions</a></li>
+						<li class="footerPrivacyLink"><a href="#">Privacy</a></li>
+					</ul>
+				</div>
+				
+				<div class="footerRow4">
+					<ul class="footerRow4Ul">
+						<li class="footerFacebookLink"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="footerTwitterLink"><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li class="footerYoutubeLink"><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li class="footerInstagramLink"><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="footerRow6">
+					<p class="footerCopyRightPara">Copyright &copy; 2021 Taleek Company</p>
+				</div>
+			</div>
+		</div>
+		<!-- ////////////////////////////////// Go Up button //////////////////////////////////	-->
+		<div class="goUpBtn" id="goUpBtnId">
+			<i class="fa fa-fighter-jet"></i>
+		</div>
+		<script src="blog_javascript.js"></script>
+	</body>
+</html>

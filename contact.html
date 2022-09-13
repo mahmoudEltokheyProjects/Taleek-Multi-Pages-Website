@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Courses</title>
+		<!-- هذا وصف للموقع حيث مجموعة من الكلمات تصف الموقع -->
+		<meta name="description" 
+			  content="Learn languages for free with Taleek. Learn English, French, Chinese, German, Spanish, Turkish, Russian and many 
+					   more. Download Taleek for iOS and Android and start learning today."
+		>
+		<!--  هذا مجموعة من المصلحات و الكلمات اللي موجودة في الموقع -->
+		<meta name="keywords" content="taleek, learn, English, French, Chinese, Spanish, German, Turkish, Russian, learn English, learn 
+									   French, learn Chinese, learn Spanish, learn German, learn Turkish, learn Russian, Ibrahim Adel, طليق, تعلم, الانجليزية, انجليزي, الفرنسية, فرنسي, الصينية, صيني, الاسبانية, الأسبانية, أسباني, الألمانية, ألماني, التركية, تركي, الروسية, روسي, تعلم الانجليزية, تعلم الفرنسية, تعلم الصينية, تعلم الأسبانية, تعلم الألمانية, تعلم التركية, تعلم الروسية, تعلم اللغات"
+		>
+        <link rel="stylesheet" href="contact_style.css" />
+		<link rel="stylesheet" href="vendors/font-awesome.min.css">
+		<!-- بتاع الموقع هعمل الاتي tab عشان احط صورة علي ال -->
+	  	<link rel="icon" href="images/favicon.png" >
+    </head>
+    <body>
+		<!-- *************************************** navbar section *********************************** -->
+		<div class="navbar" id="navbarId">
+			<div class="navbarContainer">
+				<!-- ************** logo part ********************-->
+				<div class="logo">
+					<a href="#"><img src="images/logo2.png" name="imgLogoName"></a>
+					<span id="logoHeaderId">taleek</span>
+				</div>
+				<!-- menubar icon -->
+				<input type="checkbox" id="checkboxId">
+				<label class="menubarLabel" for="checkboxId" id="menubarLabelId">
+					<div class="menubarDiv1" id="menubarId"></div>
+					<div class="menubarDiv2" id="menubarId"></div>
+					<div class="menubarDiv3" id="menubarId"></div>
+				</label>
+				<!-- ************** links part ********************-->
+				<div class="navbarLinks">
+					<ul>
+						<li><img src="images/globe-solid-min.svg" alt="image not found"></li>
+						<li><a href="index.html">home</a></li>
+						<li><a href="discussion.html">discussion</a></li>
+						<li><a href="courses.html">courses</a></li>
+						<li><a href="#">blog</a></li>
+						<li><a href="about.html">about</a></li>
+						<li><a href="contact.html" class="active">contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- *************************************** contact section *********************************** -->
+		<div class="contact">
+			<div class="contactContainer">
+				<!-- ************************* row 1 ************************* -->
+				<div class="contactRow1">
+					<p>get in touch with taleek</p>
+				</div>
+				<!-- ************************* row 2 ************************* -->
+				<div class="contactRow2">
+					<!-- ########### box 1 ########### -->
+					<div class="contactBox">
+						<div class="contactImg"><img src="images/logo1.png" alt="image not found"></div>
+						<div class="contactPara"><p>Need help with something?</p></div>
+						<div class="contactLink"><a href="#">Check out discussion here <i class="fa fa-arrow-right"></i></a> </div>
+					</div>
+					<!-- ########### box 2 ########### -->
+					<div class="contactBox">
+						<div class="contactImg"><img src="images/logo1.png" alt="image not found"></div>
+						<div class="contactPara"><p>Press and Bloggers</p></div>
+						<div class="contactLink"><a href="#">Click here to contact us<i class="fa fa-arrow-right"></i></a> </div>
+					</div>
+					<!-- ########### box 3 ########### -->
+					<div class="contactBox">
+						<div class="contactImg"><img src="images/logo1.png" alt="image not found"></div>
+						<div class="contactPara"><p>Business Partnership</p></div>
+						<div class="contactLink"><a href="#">Click here to contact us<i class="fa fa-arrow-right"></i></a> </div>
+					</div>
+				</div>
+				<!-- *************************************** contact form section *********************************** -->
+				<div class="contactForm">
+					<h3 class="contactFormH3">Something else?</h3>
+					<p class="contactFormPara">This may take some time depending on the volume of messages we recieve </p>
+					<div class="contactFormContainer">
+						<form>
+							<label>your name</label>
+							<input type="text" placeholder="Enter Your Name" id="usernameId">
+							<label>your email</label>
+							<input type="email" placeholder="Enter Your Email" id="emailId">
+							<label>message subject</label>
+							<textarea placeholder="Enter Your Message" rows="10" cols="50" id="textareaId"></textarea>
+						</form>
+						<!-- ************* not robot  ************* -->
+						<div class="contactFormNotRobot">
+							<!-- label  علي ال check  كاني عمل label عشان لما اضغط علي ال checkbox بتاع ال id نفس قيمة ال label بتاع ال for هخلي ال  -->
+							<label class="checkboxContainer" id="checkboxContainerId"><i class="fa fa-check" id="contactCheckboxId"></i></label>
+							<div class="robotTextContainer"><p>I'm not a robot</p></div>
+							<div class="robotImgContainer"><img src="images/notRobot.PNG"></div>
+						</div>
+						<!-- ************* send button ************* -->
+						<button class="sendFormBtn">send</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- **************************************************** footer section ********************************************** -->
+		<div class="footer">
+			<div class="footerContainer">
+				<div class="footerRow1">
+					<img src="images/logo1.png" class="footerImgClass">
+					<span class="footerH4"><a href="#">taleek</a></span>
+				</div>
+				<div class="footerRow2">
+					<ul class="footerRow2Ul">
+						<li class="footerHomeLink"><a href="index.html">Home</a></li>
+						<li class="footerDiscussionLink"><a href="discussion.html">Discussion</a></li>
+						<li class="footerCoursesLink"><a href="courses.html">Courses</a></li>
+						<li class="footerBlogLink"><a href="blog.html">Blog</a></li>
+						<li class="footerAboutLink"><a href="about.html">About</a></li>
+						<li class="footerContactLink"><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="footerRow3">
+					<ul class="footerRow3Ul">
+						<li class="footerVisionLink"><a href="#">Vision</a></li>
+						<li class="footerMissionLink"><a href="#">Mission</a></li>
+						<li class="footerOurTeamLink"><a href="#">Our Team</a></li>
+						<li class="footerJobsLink"><a href="#">Jobs</a></li>
+						<li class="footerTermsLink"><a href="#">Terms & Conditions</a></li>
+						<li class="footerPrivacyLink"><a href="#">Privacy</a></li>
+					</ul>
+				</div>
+				
+				<div class="footerRow4">
+					<ul class="footerRow4Ul">
+						<li class="footerFacebookLink"><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li class="footerTwitterLink"><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li class="footerYoutubeLink"><a href="#"><i class="fa fa-youtube"></i></a></li>
+						<li class="footerInstagramLink"><a href="#"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+				<div class="footerRow5">
+					<button class="footerDownloadBtn"><a href="#"></a></button>
+				</div>
+				<div class="footerRow6">
+					<p class="footerCopyRightPara">Copyright &copy; 2021 Taleek Company</p>
+				</div>
+			</div>
+		</div>
+		<!-- ////////////////////////////////// Go Up button //////////////////////////////////	-->
+		<div class="goUpBtn" id="goUpBtnId">
+			<i class="fa fa-fighter-jet"></i>
+		</div>
+		<script src="contact_javascript.js"></script>
+    </body>
+</html>
+

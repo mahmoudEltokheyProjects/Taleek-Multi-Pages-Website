@@ -1,0 +1,1180 @@
+/*
+	#####################################################################################
+										Global Style
+	#####################################################################################
+*/
+*
+{
+	box-sizing: border-box ;
+	font-family: sans-serif ;
+}
+/* ------------- smooth يطلع للاعلي بشكل  goUp button عشان لما اضغط علي ال ------------- */
+html , body 
+{
+    /*  smooth بشكل  section عشان لما اضغط علي اللينك يتم الانتقال لل */
+	scroll-behavior:smooth ;
+}
+body
+{
+	/* ---------- الاصلي  body  حسب ال body overlay layer عشان احرك ال	---------- */
+	position: relative ;
+	margin: 0 ;
+	padding: 0 ;
+}
+/* ************************************** navbar 1 section ************************************** */
+/* ************************************** navbar 2 section ************************************** */
+.navbar1	,
+.navbar2
+{
+	width: 100%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f00 ;*/
+}
+.navbar1
+{
+	background-color: #264380 ;	
+}
+.navbar2
+{
+	background-color: rgb(31,46,85) ;
+}
+/* ************************************** navbar 1 container ************************************** */
+/* ************************************** navbar 2 container ************************************** */
+.navbar1  .navbar1Container	,
+.navbar2 .navbar2Container
+{
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0 ; */
+	margin: 10px auto ;
+}
+.navbar1 .navbar1Container
+{
+	width:90%;
+}
+.navbar2 .navbar2Container
+{
+	width: 95%;
+	
+}
+/*	/////////////////////////////// navbar 1 logo : left part ///////////////////////  */
+/*  ///////////// navbar 2 logo : left part : search and power-off icon ///////////// */
+.navbar1  .navbar1Container  .navbar1Logo	,
+.navbar2  .navbar2Container  .navbar2LeftPart	
+{
+	float: left; 
+	width: 25% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0 ; */
+}
+/*	 ////////////////////////// navbar 1 logo : left part : <img> logo /////////////////////////   */
+.navbar1  .navbar1Container  .navbar1Logo	img
+{
+	width: 50px ;
+	height: 50px ;
+	margin-bottom: -15px ;
+}
+/*	 ////////////////////////// navbar 1 logo : left part : logo  h2 /////////////////////////   */
+.navbar1  .navbar1Container  .navbar1Logo	h2
+{
+	display:  inline-block ;
+	text-transform: capitalize ;
+	color: #fff ;
+}
+
+/* ////////////////////////// navbar 1 links : right part //////////////////////// */
+/* ///////////// navbar 2 links : right part : logo and menubar icon ///////////// */
+.navbar1  .navbar1Container  .navbar1Links ,
+.navbar2  .navbar2Container  .navbar2Links 
+{
+	float: right; 
+	width: 75% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f ;  */
+	text-align: right ;
+}
+/* ////////////////////////// navbar 1 links : right part  :  <ul></ul> //////////////////////// */
+/* ///////////// navbar 2 links : right part : logo and menubar icon :  <ul></ul> ///////////// */
+.navbar1  .navbar1Container  .navbar1Links	ul ,
+.navbar2  .navbar2Container  .navbar2Links  ul
+{
+	list-style: none ;
+	margin: 0 ;
+}
+/* ////////////////////////// navbar 1 links : right part  :  <ul> <li></li> </ul> //////////////////////// */
+/* ///////////// navbar 2 links : right part : logo and menubar icon :  <ul> <li></li> </ul>  ///////////// */
+.navbar1  .navbar1Container  .navbar1Links	ul	li ,
+.navbar2  .navbar2Container  .navbar2Links  ul	li
+{
+	display: inline-block ;
+	margin-right: 10px ;
+}
+/* ////////////////////////// navbar 1 links : right part  :  <ul> <li> <a></a> </li> </ul> //////////////////////// */
+/* ///////////// navbar 2 links : right part : logo and menubar icon :  <ul> <li> <a></a> </li> </ul>  ///////////// */
+.navbar1  .navbar1Container  .navbar1Links	ul	li a ,
+.navbar2  .navbar2Container  .navbar2Links  ul	li a
+{
+	text-decoration: none ;
+	color: #fff ;
+	text-transform: capitalize ;
+	font-size: 20px ;
+}
+/* *********************************************** navbar 2 links : right part **************************************** */
+/* ///////////// navbar 2 links : right part : logo and menubar icon ///////////// */
+.navbar1  .navbar1Container  .navbar1Links 
+{
+	margin-top: 22px ;
+}
+/*  ///////////// navbar 2 logo : left part : search and power-off icon ///////////// */
+.navbar2  .navbar2Container  .navbar2LeftPart	
+{
+	margin-top: 15px ; 
+}
+/* ///////////// navbar 2 links : left part :  search and power-off icons : <ul> <li> <a> <i></i> </a> </li> </ul>  ///////////// */
+.navbar2  .navbar2Container  .navbar2LeftPart  i
+{
+	color: #fff ;
+	font-size: 25px ;
+	margin-right: 20px ;
+	cursor: pointer ;
+}
+/* ///////////// navbar 2 links : right part : logo and menubar icon :  <ul> <li> <a> <img> </a> </li> </ul>  ///////////// */
+.navbar2  .navbar2Container  .navbar2Links	ul	li  a  img 
+{
+	width: 50px ;
+	height: 50px ;	
+	margin-bottom: -5px ;
+	margin-right: 0px ;
+}
+.navbar2  .navbar2Container  .navbar2Links	ul	li.navbar2RightLink
+{
+	margin-left: -10px ;
+}
+/* ///////////// navbar 2 links : right part : menubar icon /////////////  */
+.navbar2  .navbar2Container  .navbar2Links	ul	li div
+{ 
+/*	border: 2px solid #f00 ; */
+	cursor: pointer ;
+	margin-left: 10px ;
+}
+/* ///////////// navbar 2 links : right part :  menubar icon : 3 <span></span> /////////////  */
+.navbar2  .navbar2Container  .navbar2Links	ul	li div span
+{
+	display: block ;
+	width: 30px;
+	height: 2px ;
+	padding: 2px ;
+	background-color: #fff ;
+	margin-bottom: 6px ;
+}
+/* /////////////// searchField container : navbar 2 اللي في ال search icon مش هيظهر الا لما اضغط علي ال ////////////// */
+.navbar2  .navbar2Container .searchFieldNavbar2Block
+{
+	position: fixed ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 50px ;
+/*	border: 2px solid #fff ;*/
+	background-color: #fff ;
+	/* overlay	عشات تظهر فوق كل الطبقات وخاصة طبقة ال*/
+	z-index: 999 ;
+	/*  menubar icon لما اضغط علي ال search inputField هيتم اظهار ال */
+	display: none ;
+}
+/* ----------------------------------------- body overlay layer ----------------------------------- */
+.boyOverlayLayer
+{
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 100% ;
+	z-index: 888 ;
+	background-color: rgba(0,0,0,0.5);
+	/*	مش هتظهر الا لما اضغط علي زرار "تسجيل" او "تسجيل الدخول" س  */
+	display: none ;
+}
+/* ***********************************************  sign up && login form ****************************************** */
+.navbar2  .navbar2Container .loginForm   ,
+.navbar2  .navbar2Container .signUpForm
+{
+	position: absolute ;
+	width: 90% ;
+	margin-left: 5% ;
+	margin-right: 5% ;
+	top: 159px ;
+	right: 0 ;
+	direction: rtl ;
+/*	border: 2px solid #0ff ; */
+	background-color: #fff ;
+	display: none ;
+	z-index: 888 ;
+}
+/* ***********************************************  sign up form ****************************************** */
+.navbar2  .navbar2Container .loginForm
+{
+	padding-top: 10px ; 	
+	z-index: 999 ;
+}
+/* ***********************************************  sign up form ****************************************** */
+.navbar2  .navbar2Container .signUpForm
+{
+	padding-top: 40px ; 
+	z-index: 999 ;
+}
+
+/* ******************  sign in form ******************  */
+.navbar2  .navbar2Container .loginForm input::-webkit-input-placeholder
+{
+	font-size: 20px ;
+}
+/* ********************************  login inputFields ******************************** */
+.navbar2  .navbar2Container .loginForm input[ type = email ] ,
+.navbar2  .navbar2Container .loginForm input[ type = password ] 
+{
+	display: block ;
+	width: 98%;
+	padding: 8px ;
+	margin-top: 30px ;
+	margin-bottom: 15px ;
+	font-size: 20px ;
+	background-color: #ddd ;
+	border: 0 ;
+	outline: 0 ;
+	padding-top: 20px ;
+	padding-bottom: 20px ;
+}
+/* ******************************** sign up  form labels ******************************** */
+.signUpForm  .signUpFormContainer 	label
+{
+	display: block ;
+	font-size: 25px ;
+/*	border: 2px solid #f0f ;    */
+	margin-top: 20px ;
+	margin-bottom: 5px ;
+	margin-right: 2.5% ;
+}
+/* ******************************** sign up inputFields ******************************** */
+.navbar2  .navbar2Container .signUpForm input[ type = text ]  ,
+.navbar2  .navbar2Container .signUpForm input[ type = email ]  ,
+.navbar2  .navbar2Container .signUpForm input[ type = password ]  
+{
+	width: 95% ;
+	margin-right: 2.5% ;
+	margin-left: 2.5% ;
+	margin-top: 1px ;
+	padding: 10px ;
+	font-size: 20px ;
+	border: 0 ;
+	outline: 0 ;
+	border-bottom: 2px solid #999 ; 
+}
+/* -------------------------------- signup form paragraph -------------------------------- */
+.navbar2  .navbar2Container .signUpForm  .signUpPara
+{
+	margin-right: 2.5% ;
+	font-size: 25px ;
+	margin-bottom: 20px; 
+}
+/* ******************************** sign up checkbox ******************************** */
+.navbar2  .navbar2Container .loginForm input[type=checkbox] 
+{
+	display: inline-block ;
+	background-color: #ddd ;       
+	margin-bottom: 20px ;
+}
+/* ******************************** sign up button تسجيل ******************************** */
+.navbar2  .navbar2Container .signUpForm  input[ type = button ]  
+{
+	padding: 15px 10px ;
+	font-size: 23px ;
+	margin-top: 20px; 
+	margin-bottom:10px; 
+	margin-right: 2.5% ;
+	border: 0 ;
+	background-color: rgb(31,46,85) ;
+	color: #fff ;
+	cursor: pointer ;
+}
+.navbar2  .navbar2Container .loginForm   a
+{
+	text-decoration: none ;
+	font-size: 20px ;
+}
+
+.navbar2  .navbar2Container .loginForm  .loginFormContainer    ,
+.navbar2  .navbar2Container .signUpForm  .sigunUpFormContainer
+{
+	padding: 20px ;
+}
+.navbar2  .navbar2Container .loginForm .loginAndSignUpBtn input[ type = button ] 
+{
+	display:  inline-block ;
+	width:50% ;
+	float: right;
+	padding: 10px ;
+	cursor: pointer ;
+	font-size: 25px ;
+	border: 0 ;
+	outline: 0 ;
+}
+/* ------------------------- signIn button -------------------------------- */
+.navbar2  .navbar2Container .loginForm .loginAndSignUpBtn input#signInBtnId
+{
+	background-color: darkcyan ;
+	color: #fff ;
+}
+/* ------------------------- signIn button -------------------------------- */
+.navbar2  .navbar2Container .loginForm .loginAndSignUpBtn input#signUpBtnId
+{
+	background-color: #ddd ;
+}
+/* ------------------------- closeIcon : login button  -------------------------------- */
+.navbar2  #closeLoginIconId 
+{
+	position: absolute ;
+	top: 5px;
+ 	left: 10px ;
+	font-size: 40px ;
+	background-color: #fff ;
+	cursor: pointer ;
+	display: none ;
+	text-decoration: none ;
+	color: #000 ;
+/*	border: 2px solid #f00 ;  */
+}
+/* ------------------------- closeIcon : SignUp button  -------------------------------- */
+.navbar2    #closeSignUpIconId
+{
+	position: absolute ;
+	top: 5px;
+ 	left: 10px ;
+	font-size: 40px ;
+	background-color: #fff ;
+	cursor: pointer ;
+	text-decoration: none ;
+	color: #000 ;
+/*	border: 2px solid #f00 ;  */
+}
+/* ############################################################### Responsive		*/
+@media(min-width:0px ) and (max-width:764px)
+{
+	/* -------------------------------- signup form paragraph -------------------------------- */
+	.navbar2  .navbar2Container .signUpForm  .signUpPara
+	{
+		font-size: 18px ;
+	}
+	/* ******************************** sign up  form labels ******************************** */
+	.signUpForm  .signUpFormContainer 	label
+	{
+		font-size: 23px ;
+	}
+}
+
+/* ----------------------------------------------------  navbar 2 : search inputField <input> ------------------------------------ */
+.navbar2  .navbar2Container .searchFieldNavbar2Block  #searchFieldNavbar2Id
+{
+	display: block ;
+	width: 96% ;
+	margin-right:4%;
+	height: 47px ;
+	padding-top: 20x;
+	padding-right: 20px;
+	font-size: 20px;
+	border: 0 ;
+	outline: 0 ;
+	text-align: right;
+	float: right ;
+/*	border: 2px solid #0ff;   */
+	/*  menubar icon لما اضغط علي ال search inputField هيتم اظهار ال */
+	display: none ;
+}
+.navbar2  .navbar2Container .searchFieldNavbar2Block  #searchFieldNavbar2Id::-webkit-input-placeholder
+{
+	font-size: 25px; 
+	text-transform: capitalize ;
+}
+/* -------------------------- close search icon  ------------------ */
+.navbar2  .navbar2Container .searchFieldNavbar2Block .closeIconSearchField
+{
+	position: absolute ;
+	top: 0px ;
+	right: 0px ;
+	text-decoration: none ;
+	font-size: 40px ;
+/*	border: 2px solid #0f0; */
+	color: #000 ;
+}
+
+/* ######################################################### Responsive ########################################################### */
+@media(min-width:0px) and (max-width:785px)
+{	
+	/*  ///////////// navbar 1 logo : left part ///////////// 	*/
+	.navbar1   .navbar1Container  .navbar1Logo
+	{
+		width: 100% ;
+		float: none ;
+	}
+	/* ///////////// navbar 1 links : right part ///////////// */
+	.navbar1   .navbar1Container  .navbar1Links
+	{
+		display: none ;
+	}
+}
+/* ----------------------------------------- sideNavbar 2 --------------------------------------- */
+.sideNavbar2
+{
+	position: fixed ;
+	top: 0 ;
+	right: 0 ;
+/*	border: 2px solid #0ff ;*/
+	width: 0px ;
+	height: 100% ;
+	background-color: #fff ;
+	text-align: right ;
+	z-index: 999 ;
+	transition: all 0.2s ease-in-out ;
+}
+.sideNavbar2  .sideNavbarContainer
+{
+	padding-top: 60px ;
+}
+.sideNavbar2  .sideNavbarContainer .sideNavbar2HeadPara
+{
+	font-size: 20px ;
+	padding-left: 20px ;
+	padding-right: 20px ;
+}
+.sideNavbar2  .sideNavbarContainer .sideNavbar2Para   
+{
+	padding-right: 15px ;
+	margin-top: 50px;
+	font-size: 23px; 
+}
+.sideNavbar2  .sideNavbarContainer .sideNavbar2Para   a
+{
+	text-decoration: none ;
+	color: #000 ;
+}
+.sideNavbar2  .sideNavbarContainer .sideNavbar2Para 	i
+{
+	font-size: 25px; 
+	padding-left: 50px ;
+}
+/* ------------------- close button for sideNavbar ----------------- */
+.sideNavbar2 .closeSideNavBtn
+{
+	text-decoration: none ;
+	font-size: 45px ;
+	color: #000 ;
+	font-weight: bold;
+	float: left;
+	margin-left: 20px ;
+	margin-top: 10px ;
+}
+.searchFieldNavbar2Block
+{
+	z-index: 888 ;	
+}
+/* ///////////////////////////////////// body overlay layer ///////////////////////////////////// */
+.bodyOverlay
+{
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+	width: 100% ;
+	height: 100% ;
+	z-index: 555 ;
+	background-color: rgba(0,0,0,0.5);
+	display: none ;
+}
+
+/* **************************************************************** Notes section ********************************************************* */
+.notes
+{
+	width: 100%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #00f ;  */
+	background-color: rgb(67,166,223);
+	padding-bottom: 10px ;
+	padding-bottom: 10px ;
+	margin-top: 10px ;
+	border-radius: 5px ;
+}
+.notes	.notesH2
+{
+	text-align: center ;
+	color: #fff ;
+	margin:10px auto ;	
+}
+.notes  .notesContainer
+{
+	width: 95%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #00f ;	*/
+	background-color: rgb(255,255,255);
+	margin:10px auto ;
+	padding: 10px ;
+	text-align: center ;
+	direction: rtl ;
+	padding-top: 30px ; 
+	padding-bottom: 30px ; 
+}
+.notes  .notesContainer .notesPara
+{
+	display: inline-block ;
+	margin-right: 15px ;
+	font-size: 25px ;
+}
+.notes  .notesContainer  i 
+{
+	width: 50px ;
+	height: 50px ;
+	color: rgb(67,166,223);
+	font-size: 35px ;
+}
+/* **************************************************** send question section ******************************************* */
+.sendQuestion
+{
+	width: 100%;
+	height: auto ;
+	overflow: hidden ;	
+/*	border: 2px solid #00f ;	*/
+	direction: rtl ;
+}
+.sendQuestion  .sendQuestionContainer
+{
+	width: 95%;
+	height: auto ;
+	overflow: hidden ;
+	margin: 20px 10px ;
+/*	border: 2px solid #f0f ;	*/
+}
+.sendQuestion  .sendQuestionContainer	.labelQuestion
+{
+	font-weight: bold ;
+	font-size: 25px ;
+}
+/* --------------------- send question : inputField ----------------- */
+.sendQuestion  .sendQuestionContainer	#inputQuestionId
+{
+	width: 85% ;
+	margin-right: 2% ;
+	padding: 10px ;
+	border: 0 ;
+	outline: 0 ;
+	border-bottom: 1px solid #333 ;
+	font-size: 25px ;
+}
+/* **************************************************** messages section ******************************************** */
+.messages
+{
+	width: 100%;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f ;	*/
+}
+.messages  .messagesContainer
+{
+	width: 85%;
+	height: auto ;
+	overflow: hidden ;
+	margin: 20px auto ;
+/*	border: 2px solid #ff0 ;	*/
+}
+/* /////////////////////////////// left part : account messages ///////////////////////////// */
+.messages  .messagesContainer  .accountMessages
+{
+	width: 60% ;
+	float: right ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0ff ; 	*/
+	padding-bottom: 25px ;
+}
+/* **************************************  box 1 ********************************* */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox
+{
+/*	border: 2px solid #f00 ;*/
+	box-shadow: 3px 3px 5px #999 ;
+	height: auto ;
+	overflow: hidden ;
+	margin-bottom: 10px ;
+	border: 1px solid #999 ;
+}
+/* ++++++++++++++ row 1 :  account image && question text ++++++++++++++ */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox 	.accountImageAndQuestionTxt
+{
+	float: right ;
+/*	border: 2px solid #00f ; */
+	padding-top: 5px ;
+	padding-bottom: 12px ;
+}
+/* ++++++++++++++ row 1 :  account image && question text :  questionText span ++++++++++++++ */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox 	.accountImageAndQuestionTxt	  .questionText
+{
+	display: inline-block ;
+	font-size: 20px ;
+}
+
+/* ++++++++++++++ row 1 :  account image && question text :  account image  ++++++++++++++ */
+/*  ----------- left part -----------  */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox 	.accountImageAndQuestionTxt  	
+{
+	float: right ;
+	width: 90% ;
+	margin: 0 ;
+	text-align: right ;
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox 	.accountImageAndQuestionTxt  	img
+{
+	width: 50px ;
+	height: 50px ;
+	border-radius: 50% ;
+	margin-bottom: -16px ;
+	margin-left: 10px ;
+	
+}
+/* ++++++++++++++ row 1 :  account image && question text :  account image  ++++++++++++++ */
+/* ----------- right part ----------- */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .accountMessageNum
+{
+	float: left ;
+	width: 10% ;
+	margin: 0 ;
+	text-align: left;
+/*	border: 2px solid #0f0;   */
+	padding-top: 18px ;
+	padding-bottom: 5px ;
+	padding-left: 10px ;
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .accountMessageNum	span
+{
+	font-size: 25px ;
+}
+/* ++++++++++++++++++++++++ row 2 :  account message comment icon && arrow button ++++++++++++++++++ */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .accountMessageIconArrowButton
+{
+	position: relative ;
+	display: block ;
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+	margin-top:10px ;
+/*	border: 2px solid #f00;  */
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	padding-left: 13px ;
+}
+/* ----------- left part :  arrow button ---------------- */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .accountMessageIconArrowButton .commentsMessageIcon
+{
+	float: right;
+	width: 48% ;
+/*	border: 2px solid #ff0;  */
+	text-align: right ;
+	margin-right: 2% ;
+	color: rgb(116,116,116);
+	font-size: 20px ;
+}
+/* ----------- right part :  arrow button  -------------- */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .accountMessageIconArrowButton .arrowMessageIcon
+{
+	float: left ;
+	width: 50% ;
+/*	border: 2px solid #f0f; */ 
+	font-size: 20px ;
+	cursor: pointer ;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++ row 3 :  account message Reply ++++++++++++++++++++++++++++++++ */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply
+{
+	display: block ;
+	width: 100%;
+	height: 0 ;
+	overflow: hidden ;
+	border: 2px solid #999 ;
+}
+/* ////////////////////// left part : number and up and down arrow //////////////////////  */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.leftPartRow3
+{
+	width: 9% ;
+ 	float: right;
+	text-align: center;
+	font-size: 23px ;
+	padding-top: 10px ;
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.leftPartRow3	.numberBetweenUpDown
+{
+	margin: 0 ;
+	padding-right: 10px ;
+}
+/*  ////////////////////// center part : number and up and down arrow ////////////////////// */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.centerRow3	
+{
+	width: 79% ;
+ 	float: right;
+	margin-top: 10px ;
+	text-align: right;
+	padding-right: 15px ;
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.centerRow3	  .numberBetweenUpDown
+{
+	font-size: 20px ;	
+	color: #999 ;	
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	 .verticalLine
+{
+	display: inline-block ;
+	float: right ;
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 		 .verticalLine  ,
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 		 .verticalLine2
+{
+	width: 2px;
+	padding: 1px ;
+	height: 150px ;
+	background-color: #999 ;
+}
+/* ////////////////////// right part : views and down arrow ////////////////////// */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 		 .verticalLine2
+{
+	display: inline-block ;
+	float: right;
+}
+/* ////////////////////// right part : views and down arrow ////////////////////// */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.arrowMessageIcon	
+{
+	width: 9% ;
+ 	float: right;
+	margin-top: 10px ; 
+	text-align: left ;
+}
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.arrowMessageIcon	.viewsPara
+{
+	font-size: 20px;
+	margin: 0 ;
+	line-height: 1.5 ;
+	font-weight: bold ;
+	padding-right: 10px ;
+}
+
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply  #arrowAwsomeId
+{
+	font-size: 20px;
+	margin-top: 10px ;
+	cursor: pointer ;
+}
+
+/* //////////////////////////////////////////////// right part : online users //////////////////////////////////////////////////// */
+.messages  .messagesContainer .onlineUsers
+{
+	width: 38% ;
+	margin-right: 2% ;
+	float: left ;
+/*	border: 2px solid #f00 ;	*/
+	direction: rtl;	
+}
+/*  +++++++++++++++++++++ box 1 : onlne users +++++++++++++++++++++ */
+.messages  .messagesContainer .onlineUsers	.onlineUsersBox
+{
+	border: 2px solid #999 ;
+	margin-bottom: 15px ; 
+}
+/* *********************************************************** Row 1 *********************************************************** */
+/*  ------------------------ left part : box 1 : row 1 : users icon && online Users Number -----------  */
+.messages  .messagesContainer .onlineUsers .onlineUsersBox .onlineUsersBoxRow1
+{
+	padding: 15px ;
+}
+/*  ------------------------ left part : box 1 : row 1 : users icon -----------  */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow1		i
+{
+	font-size: 35px ;
+	color: rgb(117,171,240);
+}
+/*  ------------------------ left part : box 1 : row 1 : online Users Number : online Users Num container ----------------------  */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox .onlineUsersBoxRow1	  .onlineUsersNum
+{
+	display: inline-block ;
+	font-size: 25px ;
+	color: #000;
+	padding-right: 40px ;
+	text-transform: capitalize ;
+}
+/*  ------------------------ left part : box 1 : row 1 : online Users Number : online Users Num Value : <span></span>  -----------  */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow1	 .onlineUsersNum	.onlineUsersNumVal
+{
+	font-size: 25px ;
+	color: #f00;
+	font-weight: bold ;
+}
+/* ------------ horizontal line ------------- */
+.messages  .messagesContainer .onlineUsers   .onlineUsersBox  .onlineUsersBoxRow1 .onlineUsersBoxRow1Line
+{
+	width: 95% ;
+	height: 1px ;
+	padding: 1px ;
+	background-color: #999 ;
+	margin-top: 15px;
+}
+/* *********************************************************** Row 2 *********************************************************** */
+/* -------------- row 2 : [ Guest && Member ] Number paragraph -----------  */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow2  .guestAndMemberPara
+{
+	font-size: 20px ;	
+	text-align: center ;
+	text-transform: capitalize ;
+	padding: 0 ;
+	margin: 0 ;
+}
+/* ------------------------ row 2 : [ Guest && Member ] Number paragraph : <span></span> ---------------------- */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow2  .guestAndMemberPara	.guestNum  ,
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow2  .guestAndMemberPara	.memberNum  
+{	
+	color: #f00 ;
+	font-weight: bold ;
+}
+/*  ------------------------------------------ row 3 : online members box --------------------------------------- */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow3Box
+{
+	width: 80% ;
+	height: auto ;
+	overflow: hidden ;
+	margin: 20px auto ;
+/*	border: 2px solid #0ff; 	*/
+	background-color: rgb(237,247,255);
+	padding-left: 5px ;
+	padding-right: 5px ;
+}
+/*  ------------------------------------------ row 3 : online members box : h5 --------------------------------------- */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow3Box	.onlineUsersBoxRow3BoxH5
+{
+	width: 95% ;
+	text-align: center ;
+	font-size: 18px ;
+	text-transform: capitalize ;
+	background-color: rgb(223,237,255);
+	padding: 5px 0px ;
+	margin: 10px  auto ;
+}
+/*  ------------------------------------------ row 3 : online members box : paragraph  --------------------------------------- */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow3Box	.onlineUsersBoxRow3BoxPara
+{
+	font-size: 18px ;
+	text-transform: capitalize ;
+	color: rgb(38,67,128);
+	line-height: 1.5 ;
+}		
+/* --------------------------- row 4 : online members box :  Total visit -Yestarday visit - Total visit   --------------------- */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow4Box
+{
+	width: 80% ;
+	height: auto ;
+	overflow: hidden ;
+	margin: 20px auto ;
+	border: 2px solid #0ff; 
+	background-color: rgb(255,252,178);
+	padding: 10px ;
+	font-weight: bold ;
+	text-transform: capitalize ;
+}
+/* --------------------------- row 4 : online members box :  Total visit -Yestarday visit - Total visit   --------------------- */
+.messages  .messagesContainer .onlineUsers  .onlineUsersBox  .onlineUsersBoxRow4Box	  .onlineUsersBoxRow4BoxParaNum
+{
+	color: #f00 ;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++ box 2 : classifications : التصنيفات +++++++++++++++++++++++++++++++++++++++++++ */
+.onlineUsersBox
+{
+	box-shadow: 2px 5px 5px #999 ;	
+}
+/*  --------------- row 1 : classifications header  -----------  */
+.onlineUsersBox  .onlineUsersBox2Row1
+{
+	background-color: rgb(244,244,244);
+	padding: 8px; 
+	border-radius: 5px ;
+}
+/*  --------------- row 1 : classifications paragraph  -----------  */
+.onlineUsersBox  .onlineUsersBox2Row1 	.classificationsPara
+{
+	font-size: 28px ;
+	font-weight: bold ;
+	margin : 5px  10px ;
+}
+/*  --------------- row 2 : list of classifications -----------  */
+/* //////// Row 2 : sub-Row 1 : جميع التصنيفات //////// */
+.onlineUsersBox   	.onlineUsersBoxRow2SubRow	
+{
+	margin-top: 20px ;
+/*	border: 2px solid  #f00 ; */
+}
+.onlineUsersBox   	.onlineUsersBoxRow2SubRow	.onlineUsersBoxRow2SubRowPara
+{
+	font-size: 25px ;
+	margin:  0 ;
+	padding-right: 5px ;
+}
+/*  //////// Row 2 : sub-Row 2 : (12) بقلم ابراهيم عادل //////// */
+/* right part : paragraph  */
+.onlineUsersBox   	.onlineUsersBoxRow2SubRow	span.onlineUsersBoxRow2SubRowPara  a
+{
+	text-decoration: none ;
+	color: #000 ;
+}
+.onlineUsersBox   	.onlineUsersBoxRow2SubRow	.onlineUsersBoxRow2SubRowNum
+{
+	float: left ;
+	padding-left: 10px ;
+	padding-top: 2px ;
+	font-size: 20px ;
+	color: rgb(221,221,221);
+}
+/* ********************************** [ answers && questions && users && comments ] numbers section *************************** */
+.answersQuestionsUsersComments  .answersQuestionsUsersCommentsBox
+{
+	width: 48% ;
+	margin: 1% ;
+	float: right ;
+	border: 2px solid #999 ;
+	text-align: center ;
+	padding-top: 10px ;
+	padding-bottom: 10px ;
+}
+/* -------------------------------- first paragraph -------------------------------- */
+.answersQuestionsUsersComments  .answersQuestionsUsersCommentsBox 	.answersQuestionsUsersCommentsPara1
+{
+	font-size: 35px ;
+	margin-bottom: 10px ;
+	font-weight: bold ;
+	color: rgb(31,46,85);
+}
+/* -------------------------------- second paragraph -------------------------------- */
+.answersQuestionsUsersComments  .answersQuestionsUsersCommentsBox 	.answersQuestionsUsersCommentsPara2
+{
+	font-size: 20px ;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+	font-weight: bold ;
+	color: rgb(31,46,85);
+}
+/* ////////////////// .onlineUsersBoxRow4Box بتاع السكشن اللي فوقه اللي واخد كلاس  float  عشان يلغي تاثر ال //////////////////	*/
+.clearBothDiv
+{
+	clear: both ;
+}
+/* ********************************** [ welcome in taleek discussion ] section ******************************** */
+.welcomeDiscussion  
+{
+	width: 100% ;
+/*	border: 2px solid #f0f ;  */
+	margin-top: 50px ;
+	background-color: rgb(31,46,85);
+	padding-top: 5px ;
+	padding-bottom: 5px ;
+	margin-top: 10px ;
+	margin-bottom: 10px ;
+	box-shadow: 2px 1px 5px #999 ;
+}
+.welcomeDiscussion  .welcomeDiscussionPara
+{
+	font-size: 18px ;
+	color: #fff ;
+	padding-left: 15px ;
+	padding-right: 15px ;
+	line-height: 1.5 ;
+	text-transform: capitalize ;
+}
+/* ########################################################### Responsive ########################################################### */
+@media(min-width:0px) and (max-width:1128px)
+{
+	/* /////////////////////////////// left part : account messages ///////////////////////////// */
+	.messages  .messagesContainer  .accountMessages		,
+	/* //////////////////////////////////////////////// right part : online users //////////////////////////////////////////////////// */
+	.messages  .messagesContainer .onlineUsers
+	{
+		width: 90% ;
+		float: none ;
+		margin-left: 5% ;
+		margin-right: 5% ;
+		
+	}
+	.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.centerRow3	  .numberBetweenUpDown
+	{
+		font-size: 16px ;	
+		color: #999 ;	
+	}
+	/* ////////////////////// right part : views and down arrow ////////////////////// */
+.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.arrowMessageIcon	
+	{
+		width: 9% ;
+		float: right;
+		margin-top: 10px ; 
+		text-align: left ;
+	}
+	.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply 	.arrowMessageIcon	.viewsPara
+	{
+		font-size:16px;
+		margin: 0 ;
+		line-height: 1.5 ;
+		font-weight: bold ;
+/*		padding-right: 80px ;*/
+	}
+
+	.messages  .messagesContainer  .accountMessages	.accountMessageBox  .row3AccountMessageReply  #arrowAwsomeId
+	{
+		font-size: 18px;
+		margin-top: 25px ;
+		cursor: pointer ;
+	}
+
+}
+/* ********************************************** footer section ****************************************** */
+.footer 
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #0f0; */
+	background-color: rgb(40,60,106) ;
+}
+.footer  .footerContainer
+{
+	width: 80% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #ff0; */
+	margin: 0px auto ;
+	margin-top: 30px ;
+	text-align: center ;
+}
+/* ------------------------------------------ row 1 ---------------------------------------- */
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------------------------------ row 5 ---------------------------------------- */
+/* ------------------------------------------ row 6 ---------------------------------------- */
+/* ------------------------------------------ row 7 ---------------------------------------- */
+.footer  .footerContainer  .footerRow1 ,
+.footer  .footerContainer  .footerRow2 ,
+.footer  .footerContainer  .footerRow3 ,
+.footer  .footerContainer  .footerRow4 , 
+.footer  .footerContainer  .footerRow5 ,
+.footer  .footerContainer  .footerRow6 ,
+.footer  .footerContainer  .footerRow7
+{
+	width: 100% ;
+	height: auto ;
+	overflow: hidden ;
+/*	border: 2px solid #f0f; */
+	
+}
+/* ------------------- row 1 : left part : image ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerImgClass
+{
+	width: 55px  ;
+	height: 55px ;
+	margin-bottom: -12px ;
+	margin-right: 15px ;
+}
+/* ------------------- row 1 : right part : h4 <a></a> ----------------------- */
+.footer  .footerContainer  .footerRow1  .footerH4  a
+{
+	font-size: 40px ;
+	color: #fff ;
+	text-decoration: none ;
+	text-transform: capitalize ;
+}
+/* ------------------------------------------ row 2 ---------------------------------------- */
+/* ------------------------------------------ row 3 ---------------------------------------- */
+/* ------------------------------------------ row 4 ---------------------------------------- */
+/* ------------------ row 2 : <ul></ul> ---------------------- */
+/* ------------------ row 3 : <ul></ul> ---------------------- */
+/* ------------------ row 4 : <ul></ul> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow3Ul ,
+.footer  .footerContainer  .footerRow2  .footerRow4Ul
+{
+	list-style: none ;
+	margin-top: 30px ;
+	margin-bottom: 0 ;
+}
+/* ------------------ row 2 : <li></li> ---------------------- */
+/* ------------------ row 3 : <li></li> ---------------------- */
+/* ------------------ row 4 : <li></li> ---------------------- */
+/* ------------------ row 7 : <li></li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  
+{
+	display: inline-block ;
+	margin-left: 15px ;
+	margin-right: 15px ;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* ------------------ row 2 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 3 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+/* ------------------ row 7 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow2  .footerRow2Ul  li  a  ,
+.footer  .footerContainer  .footerRow3  .footerRow3Ul  li  a  ,
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a  ,
+.footer  .footerContainer  .footerRow7  .footerRow7Ul  li  a
+{
+	color: #fff ;	
+	text-decoration: none ;
+	font-size: 16px ;
+}
+/* ------------------ row 4 : <li> <a></a> </li> ---------------------- */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a
+{
+	font-size: 25px;
+	transition: 0.5s ease ;
+}
+/* ---------------- row 4 : <li> <a></a> </li> : social Media[ facebook , twitter, youtube , instagram]:hover ------------------ */
+.footer  .footerContainer  .footerRow4  .footerRow4Ul  li  a:hover
+{
+	color: #D1335B ;
+}
+/* ------------------ row 6 : <p> </p> ---------------------- */
+.footer  .footerContainer  .footerRow6  .footerCopyRightPara    
+{
+	color: #fff ;
+	font-size: 18px ;
+}
+/* ////////////////////////////////// Go Up button //////////////////////////////////  */
+.goUpBtn
+{
+	position: fixed;
+	/*  عشان يظهر فوق اي عنصر حيث في الشاشات الصغيرة هيكون ظاهر في اي عنصر يمر به */
+	z-index: 555 ;
+	bottom: 10px ;
+	right: 5px ;
+	padding: 15px ;
+/*	border: 2px solid #f00;*/
+	background-color: #555 ;
+	color: #fff;
+	border-radius: 50%; 
+	border: 0 ;
+	outline: 0 ;
+	cursor: pointer ;
+	/* 	 هيتم اخفاء الزرار وهيتم اظهاره لما انزل مسافة 400 بيكسل بحيث لما اضغط علي هذا الزرار يطلعني لبداية الصفحة */
+	display: none ;
+}
+/* --------------------- هخلي الصاروخ متجه للاعلي --------------------- */
+.goUpBtn  .fa.fa-fighter-jet
+{
+    transform: rotate(-90deg) ;  
+	font-size: 25px ; 
+	color: gold ;
+}
